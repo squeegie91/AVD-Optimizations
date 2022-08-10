@@ -67,7 +67,8 @@ Set-Content $updatePath $file
 
 # run script
 # Citrix Optimizer Windows 10 21H2
-.\CtxOptimizerEngine.ps1 -Source "C:\RSadmin\CitrixOptimizerTool\Templates\RS_W10_21H2_Optimizations.xml" -Mode Execute
+Get-ChildItem -Path 'C:\RSAdmin\CitrixOptimizer' -Recurse | Unblock-File
+.\CtxOptimizerEngine.ps1 -Source RS_W10_21H2_Optimizations.xml -Mode Execute
 Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
 
 # Sleep for a min
