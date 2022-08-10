@@ -77,8 +77,8 @@ Start-Sleep -Seconds 60
 
 
 # Citrix Optimizer Windows 10 21H2
-Set-Location 'C:\RSAdmin\CitrixOptimizer'
-Get-ChildItem -Path 'C:\RSAdmin\CitrixOptimizer' -Recurse | Unblock-File
+Set-Location 'C:\RSadmin\AVD-Optimizations-main\CitrixOptimizerTool'
+Get-ChildItem -Path 'C:\RSadmin\AVD-Optimizations-main\CitrixOptimizerTool' -Recurse | Unblock-File
 .\CtxOptimizerEngine.ps1 -Source RS_W10_21H2_Optimizations.xml -Mode Execute
 Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
 
