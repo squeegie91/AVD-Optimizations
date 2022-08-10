@@ -66,16 +66,19 @@ if (Test-Path $WinstationsKey) {
 Set-Content $updatePath $file
 
 # run script
-# Citrix Optimizer Windows 10 21H2
-Get-ChildItem -Path 'C:\RSAdmin\CitrixOptimizer' -Recurse | Unblock-File
-.\CtxOptimizerEngine.ps1 -Source RS_W10_21H2_Optimizations.xml -Mode Execute
-Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
+#Write-Host 'Running new AIB Customization script'
+.\Windows_VDOT.ps1 -Verbose -AcceptEULA
+Write-Host 'AVD Customization: Finished OS Optimizations script Windows_VDOT.ps1'
+
 
 # Sleep for a min
 Start-Sleep -Seconds 60
 #Running new file
 
-#Write-Host 'Running new AIB Customization script'
-.\Windows_VDOT.ps1 -Verbose -AcceptEULA
-Write-Host 'AVD Customization: Finished OS Optimizations script Windows_VDOT.ps1'
+
+# Citrix Optimizer Windows 10 21H2
+Set-Location 'C:\RSAdmin\CitrixOptimizer'
+Get-ChildItem -Path 'C:\RSAdmin\CitrixOptimizer' -Recurse | Unblock-File
+.\CtxOptimizerEngine.ps1 -Source RS_W10_21H2_Optimizations.xml -Mode Execute
+Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
 
