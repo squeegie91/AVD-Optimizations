@@ -23,7 +23,7 @@ Invoke-WebRequest -Uri $osOptURL -OutFile $osOptURLexe
 
 # Patch: overide the Win10_VirtualDesktop_Optimize.ps1 - setting 'Set-NetAdapterAdvancedProperty'(see readme.md)
 Write-Host 'Patch: Disabling Set-NetAdapterAdvancedProperty in Windows_VDOT.ps1'
-$updatePath = 'C:\RSAdmin\Virtual-Desktop-Optimization-Tool-main\Windows_VDOT.ps1'
+$updatePath = 'C:\RSAdmin\AVD-Optimizations-main\Windows_VDOT.ps1'
  ((Get-Content -Path $updatePath -Raw) -replace 'Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB', '#Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB') | Set-Content -Path $updatePath
 
 
