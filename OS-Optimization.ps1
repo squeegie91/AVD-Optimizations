@@ -6,7 +6,7 @@ New-Item -Path $drive -Name $appName -ItemType Directory -ErrorAction SilentlyCo
 $LocalPath = $drive + '\' + $appName
 Set-Location $LocalPath
 Write-Host 'Created the local directory'
-$osOptURL = 'https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool/archive/refs/heads/main.zip'
+$osOptURL = 'https://github.com/squeegie91/AVD-Optimizations/archive/refs/heads/main.zip'
 $osOptURLexe = 'Windows_10_VDI_Optimize-main.zip'
 $outputPath = $LocalPath + '\' + $osOptURLexe
 Write-Host 'Loading up the repo to local folder'
