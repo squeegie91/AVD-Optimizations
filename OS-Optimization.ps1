@@ -66,8 +66,8 @@ if (Test-Path $WinstationsKey) {
 Set-Content $updatePath $file
 
 # run script
-# .\optimize -WindowsVersion 2004 -Verbose
-.\CtxOptimizerEngine.ps1 -Source Citrix_Windows_10_2009.xml -Mode Execute
+# Citrix Optimizer Windows 10 21H2
+.\CtxOptimizerEngine.ps1 -Source "C:\RSadmin\CitrixOptimizerTool\Templates\RS_W10_21H2_Optimizations.xml" -Mode Execute
 Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
 
 # Sleep for a min
