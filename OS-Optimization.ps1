@@ -1,6 +1,6 @@
 # OS Optimizations for WVD
 Write-Host 'AIB Customization: OS Optimizations for WVD'
-$appName = 'optimize'
+$appName = 'RSadmin'
 $drive = 'C:\'
 New-Item -Path $drive -Name $appName -ItemType Directory -ErrorAction SilentlyContinue
 $LocalPath = $drive + '\' + $appName
@@ -12,24 +12,24 @@ $outputPath = $LocalPath + '\' + $osOptURLexe
 Write-Host 'Loading up the repo to local folder'
 Invoke-WebRequest -Uri $osOptURL -OutFile $outputPath
 Write-Host 'AIB Customization: Starting OS Optimizations script'
-Expand-Archive -LiteralPath 'C:\\Optimize\\Windows_10_VDI_Optimize-main.zip' -DestinationPath $Localpath -Force -Verbose
+Expand-Archive -LiteralPath 'C:\\RSadmin\\Windows_10_VDI_Optimize-main.zip' -DestinationPath $Localpath -Force -Verbose
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 Set-Location -Path C:\\Optimize\\Virtual-Desktop-Optimization-Tool-main
 
 # instrumentation
-$osOptURL = 'https://raw.githubusercontent.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool/main/Win10_VirtualDesktop_Optimize.ps1'
+$osOptURL = 'https://raw.githubusercontent.com/squeegie91/AVD-Optimizations/main/AVD-ImageUpdate.ps1'
 $osOptURLexe = 'optimize.ps1'
 Invoke-WebRequest -Uri $osOptURL -OutFile $osOptURLexe
 
 # Patch: overide the Win10_VirtualDesktop_Optimize.ps1 - setting 'Set-NetAdapterAdvancedProperty'(see readme.md)
 Write-Host 'Patch: Disabling Set-NetAdapterAdvancedProperty'
-$updatePath = 'C:\optimize\Virtual-Desktop-Optimization-Tool-main\Win10_VirtualDesktop_Optimize.ps1'
+$updatePath = 'C:\RSAdmin\Virtual-Desktop-Optimization-Tool-main\Win10_VirtualDesktop_Optimize.ps1'
  ((Get-Content -Path $updatePath -Raw) -replace 'Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB', '#Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB') | Set-Content -Path $updatePath
 
 
 
 Write-Host 'Patch: Disabling Set-NetAdapterAdvancedProperty in Windows_VDOT.ps1'
-$updatePath = 'C:\optimize\Virtual-Desktop-Optimization-Tool-main\Windows_VDOT.ps1'
+$updatePath = 'C:\RSAdmin\Virtual-Desktop-Optimization-Tool-main\Windows_VDOT.ps1'
  ((Get-Content -Path $updatePath -Raw) -replace 'Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB', '#Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB') | Set-Content -Path $updatePath
 
 
