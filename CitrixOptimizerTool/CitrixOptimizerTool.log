@@ -1,0 +1,209 @@
+8/9/2022 5:21:11 PM|GLOBAL|Information|1|Started source provider
+8/9/2022 5:21:11 PM|GLOBAL|Information|1|Start Optimizer. System Info:
+Version = 3.0.0.2
+Operating system = Microsoft Windows NT 6.2.9200.0
+Processor architecture = AMD64
+8/9/2022 5:21:11 PM|GLOBAL|Verbose|1|Checking for update ...
+8/9/2022 5:21:11 PM|GLOBAL|Verbose|1|Current version is uptodate
+8/9/2022 5:21:11 PM|GLOBAL|Verbose|1|Local Templates Directory: C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates
+8/9/2022 5:21:11 PM|GLOBAL|Information|1|The best template file path is: C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates\Citrix_Windows_11_2009.xml
+8/9/2022 5:21:11 PM|MainViewModel|Information|1|Started source provider
+8/9/2022 5:21:11 PM|XMLViewerPageViewModel|Information|1|Started source provider
+8/9/2022 5:21:11 PM|MarketplaceXMLViewerPageViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|GLOBAL|Information|1|The templates number need to update is 0
+8/9/2022 5:21:12 PM|TemplateBuilderPageViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|RecentTemplatesViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|HistoryViewerPageViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|HistoryViewerPageViewModel|Verbose|1|InitEventModes
+8/9/2022 5:21:12 PM|MainPageViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|PredefiniedTemplatesViewModel|Information|1|Started source provider
+8/9/2022 5:21:12 PM|GLOBAL|Information|1|The best template file path is: C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates\Citrix_Windows_11_2009.xml
+8/9/2022 5:21:24 PM|PredefiniedTemplatesViewModel|Verbose|1|Selected template file 'Windows 11 version 21H2 (2009) from Citrix'
+8/9/2022 5:21:24 PM|GLOBAL|Verbose|11|Selected template file is intact
+8/9/2022 5:21:24 PM|PredefiniedTemplatesViewModel|Verbose|1|Navigating to 'Pages/TemplateViewerPage.xaml'
+8/9/2022 5:21:24 PM|PredefiniedTemplatesViewModel|Verbose|1|Navigating to 'Pages/TemplateViewerPage.xaml'
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|Invoking powershell for 'ANALYSIS'
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|Command line =  -ExecutionPolicy ByPass -NoProfile -NoExit -File "C:\Users\Squeegie\Downloads\CitrixOptimizerTool\CtxOptimizerEngine.ps1" -Mode Analyze -Source "C:\Users\Squeegie\AppData\Local\Temp\CTXOE.tmp\jm24bjrn.lma\~Citrix_Windows_11_2009.xml"
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|Running script 'C:\Users\Squeegie\Downloads\CitrixOptimizerTool\CtxOptimizerEngine.ps1' with parameters: Mode=Analyze;Source=C:\Users\Squeegie\AppData\Local\Temp\CTXOE.tmp\jm24bjrn.lma\~Citrix_Windows_11_2009.xml;OptimizerUI=True
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CtxOptimizerEngine.ps1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOE.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_Features.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_PowerShell.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_Registry.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_SchTasks.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_Services.psm1 unblocked
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|1|File CTXOEP_UWP.psm1 unblocked
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|1|RunScriptAsync begin
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|1|Add powershell task
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|1|Start powershell task
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|12|Create powershell class
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|12|Add parameters to ps context
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|12|Add DataAdded eventhandler for outputCollection
+8/9/2022 5:22:21 PM|GLOBAL|Verbose|12|Invoke ps
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = AllJoyn Router Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Application Layer Gateway Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = AVCTP service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = BitLocker Drive Encryption Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Block Level Backup Engine Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Bluetooth Audio Gateway Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Bluetooth Support Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = BranchCache, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Contact Data, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Data Usage, result = 0, message: Desired startup type Disabled, current type Automatic
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Diagnostic Policy Service, result = 0, message: Desired startup type Disabled, current type Automatic
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Diagnostic Service Host, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Diagnostic System Host, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Distributed Link Tracking Client, result = 0, message: Desired startup type Disabled, current type Automatic
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Downloaded Maps Manager, result = 0, message: Desired startup type Disabled, current type Automatic
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Encrypting File System (EFS), result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Fax, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Function Discovery Provider Host, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Function Discovery Resource Publication, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = GameDVR and Broadcast user service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Geolocation Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Internet Connection Sharing (ICS), result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = MessagingService, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Offline Files, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Offline Files Driver, result = 0, message: Desired startup type Disabled, current type System
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Parental Controls, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Retail Demo Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Sensor Monitoring Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = SSDP Discovery, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = UPnP Device Host, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Volumetric Audio Compositor Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Windows Connect Now - Config Registrar, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Windows Media Player Network Sharing Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Windows Mobile Hotspot Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = WLAN AutoConfig, result = 0, message: Desired startup type Disabled, current type Automatic
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = WWAN AutoConfig, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Xbox Accessory Management Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Xbox Live Auth Manager, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Xbox Live Game Save, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:21 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableServices, entry = Xbox Live Networking Service, result = 0, message: Desired startup type Disabled, current type Manual
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.BingWeather, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.DesktopAppInstaller, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.GetHelp, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.Getstarted, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.HEIFImageExtension, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.Microsoft3DViewer, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.MicrosoftOfficeHub, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.MicrosoftSolitaireCollection, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.MixedReality.Portal, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.MSPaint, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.Office.OneNote, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.People, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.SkypeApp, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.Wallet, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WebMediaExtensions, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WebpImageExtension, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsAlarms, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsCamera, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsCommunicationsApps, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsFeedbackHub, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsMaps, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.WindowsSoundRecorder, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.Xbox.TCUI, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.XboxApp, result = 1, message: UWP app is not installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.XboxGameOverlay, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.XboxGamingOverlay, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.XboxIdentityProvider, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.XboxSpeechToTextOverlay, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.YourPhone, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.ZuneMusic, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = RemoveApplications, entry = Microsoft.ZuneVideo, result = 0, message: UWP app is installed
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = AnalyzeSystem, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = BfeOnServiceStartTypeChange, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Cellular, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Consolidator, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Diagnostics, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = FamilySafetyMonitor, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = FamilySafetyRefresh, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = File History (maintenance mode), result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Location - Actions Dialog, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Location - Notifications, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = MapsToastTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = MapsUpdateTask, result = 1, message: Scheduled Task is disabled
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Microsoft Compatibility Appraiser, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Microsoft-Windows-DiskDiagnosticDataCollector, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Microsoft-Windows-DiskDiagnosticResolver, result = 1, message: Scheduled Task is disabled
+8/9/2022 5:22:22 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Mobile Broadband Accounts, result = 1, message: Scheduled task does not exist
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = NotificationTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ProactiveScan, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ProcessMemoryDiagnosticEvents, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ProgramDataUpdater, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Proxy, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = RecommendedTroubleshootingScanner, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ReconcileFeatures, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ReconcileLanguageResources, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = RefreshCache, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = RegIdleBackup, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ResolutionHost, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ResPriStaticDbSync, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = RunFullMemoryDiagnostic, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ScanForUpdates, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ScanForUpdatesAsUser, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Scheduled, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = ScheduledDefrag, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SilentCleanup, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SmartRetry, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SpaceAgentTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SpaceManagerTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SpeechModelDownloadTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Sqm-Tasks, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = SR, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = StartComponentCleanup, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = StartupAppTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = StorageSense, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = UninstallDeviceTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = UsbCeip, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Usb-Notifications, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = VerifyWinRE, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = WIM-Hash-Management, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Windows Error Reporting, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = Windows Media Sharing, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = WinSAT, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:23 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = WsSwapAssessmentTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = DisableScheduledTasks, entry = XblGameSaveTask, result = 0, message: Scheduled Task is not in Disabled state
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = DeleteUserAppContainersOnLogoff, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable background auto-layout, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable background disk defragmentation, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable default system screensaver, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable Hibernate, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable memory dump creation, result = 0, message: Different value (7 instead of 0)
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable NTFS last access timestamps, result = 0, message: Different value (2147483650 instead of 2147483651)
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable Storage Sense, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Disable the Windows First Logon Animation, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Hide hard error messages, result = 0, message: Different value (0 instead of 2)
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Increase Disk I/O Timeout to 200 seconds, result = 0, message: Different value (65 instead of 200)
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Set power plan to High Performance, result = 1, message: Correct mode is selected. Power management schema ID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Turn off Cortana, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Miscellaneous, entry = Windows Update, result = 0, message: Registry value does not exists
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Rollback, entry = Connected User Experiences and Telemetry, result = 1, message: Startup type is Automatic
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Rollback, entry = Optimize drives, result = 1, message: Startup type is Manual
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Verbose|20|Data received: group = Rollback, entry = Shell Hardware Detection, result = 1, message: Startup type is Automatic
+8/9/2022 5:22:24 PM|XMLViewerPageViewModel|Information|12|PS invocation complete: ProcessingState = ANALYSIS_COMPLETED, TotalEntriesOptimized = 14
+8/9/2022 5:22:24 PM|GLOBAL|Verbose|12|Remove powershell task
+8/9/2022 5:22:27 PM|MainViewModel|Verbose|1|Navigating to 'Pages/SettingsPage.xaml'
+8/9/2022 5:22:27 PM|SettingPageViewModel|Information|1|Started source provider
+8/9/2022 5:22:35 PM|MainViewModel|Verbose|1|Navigating to 'Pages/TemplateViewerPage.xaml'
+8/9/2022 5:22:47 PM|MainViewModel|Verbose|1|Navigating to 'Pages/SettingsPage.xaml'
+8/9/2022 5:22:47 PM|SettingPageViewModel.2|Information|1|Started source provider
+8/9/2022 5:22:52 PM|MainViewModel|Verbose|1|Navigating to 'Pages/TemplateViewerPage.xaml'
+8/9/2022 5:22:54 PM|XMLViewerPageViewModel|Verbose|1|'Done' option selected
+8/9/2022 5:23:02 PM|XMLViewerPageViewModel|Verbose|1|Navigating to 'Pages/MainPage.xaml'
+8/9/2022 5:23:02 PM|MainPageViewModel.2|Information|1|Started source provider
+8/9/2022 5:23:02 PM|PredefiniedTemplatesViewModel.2|Information|1|Started source provider
+8/9/2022 5:23:02 PM|GLOBAL|Information|1|The best template file path is: C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates\Citrix_Windows_11_2009.xml
+8/9/2022 5:23:05 PM|TemplateBuilderViewModel|Information|1|Started source provider
+8/9/2022 5:23:09 PM|TemplateBuilderViewModel|Verbose|1|Selected Exisiting Template
+8/9/2022 5:23:09 PM|TemplateBuilderViewModel|Verbose|1|Navigating to 'Pages//TemplateBuilderPage.xaml'
+8/9/2022 5:23:20 PM|TemplateBuilderPageViewModel|Verbose|1|'Save as new template' option selected
+8/9/2022 5:23:20 PM|CreateTemplateMetadataWindowViewModel|Information|1|Started source provider
+8/9/2022 5:24:22 PM|TemplateBuilderPageViewModel|Verbose|1|Saving template 'C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates\RS_W11_21H2_Optimizations.xml'
+8/9/2022 5:24:26 PM|TemplateBuilderPageViewModel|Verbose|1|Navigating to 'Pages/MainPage.xaml'
+8/9/2022 5:24:26 PM|MainPageViewModel.3|Information|1|Started source provider
+8/9/2022 5:24:30 PM|TemplateBuilderViewModel|Verbose|1|Selected Exisiting Template
+8/9/2022 5:24:30 PM|TemplateBuilderViewModel|Verbose|1|Navigating to 'Pages//TemplateBuilderPage.xaml'
+8/9/2022 5:24:47 PM|TemplateBuilderPageViewModel|Verbose|1|'Save as new template' option selected
+8/9/2022 5:24:47 PM|CreateTemplateMetadataWindowViewModel.2|Information|1|Started source provider
+8/9/2022 5:25:26 PM|TemplateBuilderPageViewModel|Verbose|1|Saving template 'C:\Users\Squeegie\Downloads\CitrixOptimizerTool\Templates\RS_W10_21H2_Optimizations.xml'
