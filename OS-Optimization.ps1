@@ -22,12 +22,6 @@ $osOptURLexe = 'optimize.ps1'
 Invoke-WebRequest -Uri $osOptURL -OutFile $osOptURLexe
 
 # Patch: overide the Win10_VirtualDesktop_Optimize.ps1 - setting 'Set-NetAdapterAdvancedProperty'(see readme.md)
-Write-Host 'Patch: Disabling Set-NetAdapterAdvancedProperty'
-$updatePath = 'C:\RSAdmin\Virtual-Desktop-Optimization-Tool-main\Win10_VirtualDesktop_Optimize.ps1'
- ((Get-Content -Path $updatePath -Raw) -replace 'Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB', '#Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB') | Set-Content -Path $updatePath
-
-
-
 Write-Host 'Patch: Disabling Set-NetAdapterAdvancedProperty in Windows_VDOT.ps1'
 $updatePath = 'C:\RSAdmin\Virtual-Desktop-Optimization-Tool-main\Windows_VDOT.ps1'
  ((Get-Content -Path $updatePath -Raw) -replace 'Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB', '#Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB') | Set-Content -Path $updatePath
@@ -73,8 +67,8 @@ Set-Content $updatePath $file
 
 # run script
 # .\optimize -WindowsVersion 2004 -Verbose
-.\Win10_VirtualDesktop_Optimize.ps1 -Verbose -AcceptEULA
-Write-Host 'AIB Customization: Finished OS Optimizations script Win10_VirtualDesktop_Optimize.ps1'
+.\CtxOptimizerEngine.ps1 -Source Citrix_Windows_10_2009.xml -Mode Execute
+Write-Host 'AVD Customization: Finished OS Optimizations script CitrixOptimizer.ps1'
 
 # Sleep for a min
 Start-Sleep -Seconds 60
@@ -82,5 +76,5 @@ Start-Sleep -Seconds 60
 
 #Write-Host 'Running new AIB Customization script'
 .\Windows_VDOT.ps1 -Verbose -AcceptEULA
-Write-Host 'AIB Customization: Finished OS Optimizations script Windows_VDOT.ps1'
+Write-Host 'AVD Customization: Finished OS Optimizations script Windows_VDOT.ps1'
 
