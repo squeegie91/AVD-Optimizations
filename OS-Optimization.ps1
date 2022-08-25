@@ -14,7 +14,7 @@ Invoke-WebRequest -Uri $osOptURL -OutFile $outputPath
 Write-Host 'AIB Customization: Starting OS Optimizations script'
 Expand-Archive -LiteralPath 'C:\\RSadmin\\Windows_10_VDI_Optimize-main.zip' -DestinationPath $Localpath -Force -Verbose
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-Set-Location -Path C:\\RSadmin\\Virtual-Desktop-Optimization-Tool-main
+Set-Location -Path C:\RSadmin\AVD-Optimizations-main
 
 # instrumentation
 $osOptURL = 'https://raw.githubusercontent.com/squeegie91/AVD-Optimizations/main/AVD-ImageUpdate.ps1'
