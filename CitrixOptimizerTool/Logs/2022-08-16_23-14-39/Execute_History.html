@@ -1,0 +1,3413 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Citrix Optimizer Tool Report</title>
+    <style type="text/css">
+          body {
+          margin: 0 auto;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;}
+
+          .container {
+          margin: 0 auto;
+          padding: 5px;
+          display: inline-block;
+          text-align: left;
+          font-size: 12px;
+          width: 1024;}
+
+          .logo {
+          float: right;}
+
+          .hr-solid {
+          clear: both;
+          border-top: solid 1px #ccc;
+          height: 3px;
+          padding:0;
+          margin: 5px 0 10px 0;}
+
+          .hr-dash {
+          border-top: dashed 1px #ccc;
+          height: 3px;
+          padding:0;
+          margin: 10px 0;}
+
+          table {
+          border: solid 1px #ccc;
+          width: 100%;}
+
+          table.summary {
+          border: 0;}
+
+          td.right {
+          text-align: right;}
+
+          td.center {
+          text-align: center;
+          vertical-align: middle;}
+
+          td.center div {
+          vertical-align: middle;
+          display: inline-block;
+          }
+
+          td, th {
+          padding: 3px;
+          text-align: left;
+          vertical-align: top;}
+
+          th.alt {
+          border-right: solid 1px #ccc;}
+
+          th.center {
+          text-align: center;}
+
+          th {
+          background: #ffffff; /* Old browsers */
+          background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 99%, #cccccc 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(99%,#efefef), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 99%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top,  #ffffff 0%,#efefef 99%,#cccccc 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 99%,#cccccc 100%); /* IE10+ */
+          background: linear-gradient(to bottom,  #ffffff 0%,#efefef 99%,#cccccc 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+          
+          border-bottom: solid 1px #ccc;
+          font-weight: 600;
+          font-size: 12px;}
+
+          td {
+          font-size: 12px;}
+
+          tr.alt {
+          background-color: #efefef;}
+
+          tr.entry:nth-child(odd) {
+          background-color: #dddddd;}
+
+          .footer {
+          clear: both;
+          border-bottom: solid 1px #ccc;
+          height: 3px;
+          padding: 0;
+          margin: 10px 0 5px 0;}
+
+          img.mark {
+          height: 3em;
+          vertical-align: middle}
+
+          div.optimized {
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAnCAYAAABJ0cukAAAAAXNSR0IArs4c6QAABJVJREFUWAntmW1oHEUYx/+zm7Q12mJEChL9UESqaSyCKIq2JFUiCailsrdpbZGWkloxH3yloHeZ5AriS1QKilRBaRC9uwSFQFFrX1JB/aSgXIpQFP1iQaEGKjatt+t/7oW7ndm7XHO5yxXcD9l5/jPzzO+Z970IXC5PzH0Yvr8FdudOSOkVsFsKiaZ+S7cXGS9BxuXwZub4Hizw2oVE075lZCM8f4p8V+QZb0fPulWYnvlC2SIvNudLOncigy8Jt1IDnIONLsjUaUvLaB5Tbl2PjPjMhBcXIYSj4BVscwYQd9bC+/cI4LdrPZphz2/HaFJNqezTfIs47qzBBRwl3eo8Y+HlE343ZDJZENS7uUZgv9ORh+8ohcylrSc5bT7Q9eYJQO5Yjblsz6/RIbnVPI944m1Dp9AcAUjnGnjnOeex1oAUYgSjqVcNPS8sfQAv71oJj7uNj/UGpBBjXLDS0EuEpT0H5GAbvLMKfkMJUy5piXcwktxr6JqwdCNwYGg5Mmc/CYWHOASZeEJjDTWXJgApW/DHGbUd9oZQTeBWfxcPKz8kz5AaH4CUFjIz4yR5yKCBOIzr27chksqYeeFKYwPwfUH4d3nCDoTgHIPd9gj2HLwYkldWauxt1D91gPCPGzQCX2PVin68cOgfI28eoXEjMOy8xA+SIYNHiO/Qhn48N/63kVeF0JgAopEX4WFfCE8alv0A9qVmQ/Kqkup/DsQiT7HnXzdoBE7zHrCB95szRt4lCMURUF8+w87YJdSdv2jUGSwD/xvh76sVXgHkFnHUvYMNfc5DpRvd667k55q6l9T2yMh2fvC9Ryf6KP/OVnsI/0ttDeRq25BuF+Cp+/fVeYf3oJvSdHp6wQ1Idwsy/oesH9zlhPiTyibC/7Rg31pFGxs7J9jzN2s6R6LrHIP4RtPnN2NuH3xvggVbtcKzaLXvx3DyR02vybSwzH6UHn41vPj+a4hGzD3bKFgiyIFuwk+yQ5aVqGoSnaPdh9jH3wf0RTBy8zPu3ogL3lf0d53m02fjj/E+Pq7ppindu+B5Rwh/VSBTiPO0+3ktPh7QF8koLjDpdPJePs3FfK3mO8OLlUuASU0vmtK5jfv8ccIX1lE+j78g2NjM79jDxcKLmyrZRlMzaLF62eN/aU3YBPsIMtKv6Tkz7t7CwFXPa/D8RUdgaz3hFUAxAGWpOWpZffk5q5T847eyhycRi/QUlOw7N/WOhoyamno7K45awNHCjWAAyo9MfMvj/UGmghcr31/BXp5C1Lk729z+gRu4btT2q68bLlprb1XrJuuotj/FNaD7UdshvE8JHdxRgFnYYhv3+TdZ5Sa9Gu1nEE+ZV4eQgoshlQ9Aec8eSJ76cgoeSOVaFiLGaRMvl10PvTLYifQpbOr6mXNiMxuvHKwlXiF8tB6QlXxWDkDVPJH+gae1ujGqdRH+CPEW4Z8Oz6yvai7isPbiqYM8C8IBhXgfI4mhsGqN0KoLQJGMJt/gLApOEYEErM7d1f6CUI+A5p9Cpa2eTJ/kf0fUdnovoafQ0T6AZ8cypUUuj3TM3QP1w9T/T+098B85PTmAC2n7bwAAAABJRU5ErkJggg==');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 2em;
+          width: 2em;}
+
+          div.notoptimized {
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAwCAYAAACrF9JNAAAAAXNSR0IArs4c6QAABXFJREFUaAXVWmtoHFUUPufu5jWbtE0tjZa2lN2kRoKo1F+KWqQiYlEqEkUURMEHom3qbpLaarZKbTdpm7agP4yCP+Iv7c+2KohWsYogWhGszSZojVgJYtvMbB6bneO5kQmz2bmTubtJk70Q7r3nfOfx7X3NzA1CicVMRPcT4MoS3QQyR8DjtT3pTwOBXSB0tbWbZjz6GAF8oG1YpAEiXIhc19CMO78Z03EhdMBuLCU3GYCYcssWuk0E682LIx26cYomaWYudRLRWt2ApeKR7ERmd2ydjp+iSI51RNejTXGdQPOF5dE07Ano1vFXFMlcDnt4LdboBJpPLAE9mknEbg/qU5vkWGLjHRykNWiAhcLZBEcpmQyUfyCQk6h0mqPcUae/mDX/0JsyVv+TQXLQIslOn2LntwRxfDUwBPab1H593VyxwnMBHD0lG5dZJu1z+lp1zXIIt2xRmkydPQGQHVfqVQrehBosmnqV9e0qjJQHJmlZ9BqP4mo/ZyqdqF8D1Y+oN0Rr4GugyxdV5v5yhO3jnbF3qg8MplXAQNN1PBFtYgcvqpwsppzP6spsDg755RCI5BTAYenMz9Gi6ogeMNub7lHlMCdJs6PxXp77W1UOloyc7F5KbvZcfr4kpRHZ1LtkiPgkwjOtxbT+eN4L4kvSsi68AEQ3eBkuSRlRkpItBa99SpK0q/kafnTrWpJk1EmtzFhjr89WK0maU5NvAEH9bIOl3uf947nRjsYWd56eJM2O6I1I8IwbWC5tnn0htO0j7nw9SUIOj0iwG1hObR7NLVa88UEn5wKSmXhsGz/Z3O0AyrW2kQ7xJjR9tueRpGONVTmEg+VKLC9vopiVGWuTsjyS1jDs5CMjmgcu4w4R7jYTLdfOkJTnCx/8r5Qxp8LUieoIxrtmSELXz//yJ79zhcjyliDimRmS3CEhYHt5U8rPngftu0hqoH+GpFQbqcEzrLhqH4vzU5rfHn81J4Fi+/TgzXbNik4mmpktL78+9hvd6W9l3nkjKQWsGEbCA7JdroVH0RJVoV1O/gUkpcJYs/ogA393QOVW88XQfmPf+T+dvD1JygsVQpFwQOVU81L7zahdl/c5hAdMXUbj0dOsvVON0NCEKtTgXFat09SEMPSw0TNw3G3mOZIOQITFDv5lbKdfUi2JqP5KcuwyRjw9m6DU+pKMHEj/QIjvudws2aYcDBQhz3Pe88NPHhMD9oAFrfwCvTxPXkQnfNNWqLjraRCrNoD9dxomP3sbcuc+L8JToQnfdvfVpc6fLdQA+K5Jx8Bsj73Mz7UlvZ1U3PY4VG3b67icqcf7X4LpL+gzkqIal2orxEbcnx7xsvadro5BJLbiGLfPO33tmudS5X3e15mV93dqu5ttwCO1V0VQYgORxGe/z4oQv4YVWbB+LWB1nae1vEKAqlpPXSAhwq+Rpvq3/LCBSEoHkdTQCT5kP/FzptLJew6amvBUk/kPwITpqQsiFALb5CD4YQOTlE4qhGjjB16+NdAsfHRkv3rf02jyiz5PeRAh53Iykho8NRdWi2RV98Av7NB3aqgCTn58eHo3pcn//zuFxk2YONkD2S/fVZn4ynlWZcMYDrSEAu2u7miUvHmFaY4O8JvMKrc8cBsF4LIGoCt8Vcef1YotvJf11vYMBSKpNZIyIUz+eEkIkhefxRWy+S7yr5II8v8PjUQEFJ5Hioy0SUo/xq2b+viX/Enhc8HFAmEPpoYuBw1UFEls/TDHj3s7ggaZTxyvr7OG8YTWQtZek+6ER+Mxftqnh9yyhW6HUWyu6Umf1olT1Eg6AcLV4Tjvct4HoAOa3/ojXYIyfEkjKR2MdTZvEDhlyPZCl8oqGMZk+opunP8AbpyniBK981EAAAAASUVORK5CYII=');
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 2em;
+          width: 2em;}
+
+          div.success {
+          display: inline-block;
+          margin-right: 0.5em;
+          vertical-align: middle;
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAnCAYAAABJ0cukAAAAAXNSR0IArs4c6QAABJVJREFUWAntmW1oHEUYx/+zm7Q12mJEChL9UESqaSyCKIq2JFUiCailsrdpbZGWkloxH3yloHeZ5AriS1QKilRBaRC9uwSFQFFrX1JB/aSgXIpQFP1iQaEGKjatt+t/7oW7ndm7XHO5yxXcD9l5/jPzzO+Z970IXC5PzH0Yvr8FdudOSOkVsFsKiaZ+S7cXGS9BxuXwZub4Hizw2oVE075lZCM8f4p8V+QZb0fPulWYnvlC2SIvNudLOncigy8Jt1IDnIONLsjUaUvLaB5Tbl2PjPjMhBcXIYSj4BVscwYQd9bC+/cI4LdrPZphz2/HaFJNqezTfIs47qzBBRwl3eo8Y+HlE343ZDJZENS7uUZgv9ORh+8ohcylrSc5bT7Q9eYJQO5Yjblsz6/RIbnVPI944m1Dp9AcAUjnGnjnOeex1oAUYgSjqVcNPS8sfQAv71oJj7uNj/UGpBBjXLDS0EuEpT0H5GAbvLMKfkMJUy5piXcwktxr6JqwdCNwYGg5Mmc/CYWHOASZeEJjDTWXJgApW/DHGbUd9oZQTeBWfxcPKz8kz5AaH4CUFjIz4yR5yKCBOIzr27chksqYeeFKYwPwfUH4d3nCDoTgHIPd9gj2HLwYkldWauxt1D91gPCPGzQCX2PVin68cOgfI28eoXEjMOy8xA+SIYNHiO/Qhn48N/63kVeF0JgAopEX4WFfCE8alv0A9qVmQ/Kqkup/DsQiT7HnXzdoBE7zHrCB95szRt4lCMURUF8+w87YJdSdv2jUGSwD/xvh76sVXgHkFnHUvYMNfc5DpRvd667k55q6l9T2yMh2fvC9Ryf6KP/OVnsI/0ttDeRq25BuF+Cp+/fVeYf3oJvSdHp6wQ1Idwsy/oesH9zlhPiTyibC/7Rg31pFGxs7J9jzN2s6R6LrHIP4RtPnN2NuH3xvggVbtcKzaLXvx3DyR02vybSwzH6UHn41vPj+a4hGzD3bKFgiyIFuwk+yQ5aVqGoSnaPdh9jH3wf0RTBy8zPu3ogL3lf0d53m02fjj/E+Pq7ppindu+B5Rwh/VSBTiPO0+3ktPh7QF8koLjDpdPJePs3FfK3mO8OLlUuASU0vmtK5jfv8ccIX1lE+j78g2NjM79jDxcKLmyrZRlMzaLF62eN/aU3YBPsIMtKv6Tkz7t7CwFXPa/D8RUdgaz3hFUAxAGWpOWpZffk5q5T847eyhycRi/QUlOw7N/WOhoyamno7K45awNHCjWAAyo9MfMvj/UGmghcr31/BXp5C1Lk729z+gRu4btT2q68bLlprb1XrJuuotj/FNaD7UdshvE8JHdxRgFnYYhv3+TdZ5Sa9Gu1nEE+ZV4eQgoshlQ9Aec8eSJ76cgoeSOVaFiLGaRMvl10PvTLYifQpbOr6mXNiMxuvHKwlXiF8tB6QlXxWDkDVPJH+gae1ujGqdRH+CPEW4Z8Oz6yvai7isPbiqYM8C8IBhXgfI4mhsGqN0KoLQJGMJt/gLApOEYEErM7d1f6CUI+A5p9Cpa2eTJ/kf0fUdnovoafQ0T6AZ8cypUUuj3TM3QP1w9T/T+098B85PTmAC2n7bwAAAABJRU5ErkJggg==');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 2em;
+          width: 2em;}
+
+          div.failed {
+          display: inline-block;
+          margin-right: 0.5em;
+          vertical-align: middle;
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAwCAYAAACrF9JNAAAAAXNSR0IArs4c6QAABXFJREFUaAXVWmtoHFUUPufu5jWbtE0tjZa2lN2kRoKo1F+KWqQiYlEqEkUURMEHom3qbpLaarZKbTdpm7agP4yCP+Iv7c+2KohWsYogWhGszSZojVgJYtvMbB6bneO5kQmz2bmTubtJk70Q7r3nfOfx7X3NzA1CicVMRPcT4MoS3QQyR8DjtT3pTwOBXSB0tbWbZjz6GAF8oG1YpAEiXIhc19CMO78Z03EhdMBuLCU3GYCYcssWuk0E682LIx26cYomaWYudRLRWt2ApeKR7ERmd2ydjp+iSI51RNejTXGdQPOF5dE07Ano1vFXFMlcDnt4LdboBJpPLAE9mknEbg/qU5vkWGLjHRykNWiAhcLZBEcpmQyUfyCQk6h0mqPcUae/mDX/0JsyVv+TQXLQIslOn2LntwRxfDUwBPab1H593VyxwnMBHD0lG5dZJu1z+lp1zXIIt2xRmkydPQGQHVfqVQrehBosmnqV9e0qjJQHJmlZ9BqP4mo/ZyqdqF8D1Y+oN0Rr4GugyxdV5v5yhO3jnbF3qg8MplXAQNN1PBFtYgcvqpwsppzP6spsDg755RCI5BTAYenMz9Gi6ogeMNub7lHlMCdJs6PxXp77W1UOloyc7F5KbvZcfr4kpRHZ1LtkiPgkwjOtxbT+eN4L4kvSsi68AEQ3eBkuSRlRkpItBa99SpK0q/kafnTrWpJk1EmtzFhjr89WK0maU5NvAEH9bIOl3uf947nRjsYWd56eJM2O6I1I8IwbWC5tnn0htO0j7nw9SUIOj0iwG1hObR7NLVa88UEn5wKSmXhsGz/Z3O0AyrW2kQ7xJjR9tueRpGONVTmEg+VKLC9vopiVGWuTsjyS1jDs5CMjmgcu4w4R7jYTLdfOkJTnCx/8r5Qxp8LUieoIxrtmSELXz//yJ79zhcjyliDimRmS3CEhYHt5U8rPngftu0hqoH+GpFQbqcEzrLhqH4vzU5rfHn81J4Fi+/TgzXbNik4mmpktL78+9hvd6W9l3nkjKQWsGEbCA7JdroVH0RJVoV1O/gUkpcJYs/ogA393QOVW88XQfmPf+T+dvD1JygsVQpFwQOVU81L7zahdl/c5hAdMXUbj0dOsvVON0NCEKtTgXFat09SEMPSw0TNw3G3mOZIOQITFDv5lbKdfUi2JqP5KcuwyRjw9m6DU+pKMHEj/QIjvudws2aYcDBQhz3Pe88NPHhMD9oAFrfwCvTxPXkQnfNNWqLjraRCrNoD9dxomP3sbcuc+L8JToQnfdvfVpc6fLdQA+K5Jx8Bsj73Mz7UlvZ1U3PY4VG3b67icqcf7X4LpL+gzkqIal2orxEbcnx7xsvadro5BJLbiGLfPO33tmudS5X3e15mV93dqu5ttwCO1V0VQYgORxGe/z4oQv4YVWbB+LWB1nae1vEKAqlpPXSAhwq+Rpvq3/LCBSEoHkdTQCT5kP/FzptLJew6amvBUk/kPwITpqQsiFALb5CD4YQOTlE4qhGjjB16+NdAsfHRkv3rf02jyiz5PeRAh53Iykho8NRdWi2RV98Av7NB3aqgCTn58eHo3pcn//zuFxk2YONkD2S/fVZn4ynlWZcMYDrSEAu2u7miUvHmFaY4O8JvMKrc8cBsF4LIGoCt8Vcef1YotvJf11vYMBSKpNZIyIUz+eEkIkhefxRWy+S7yr5II8v8PjUQEFJ5Hioy0SUo/xq2b+viX/Enhc8HFAmEPpoYuBw1UFEls/TDHj3s7ggaZTxyvr7OG8YTWQtZek+6ER+Mxftqnh9yyhW6HUWyu6Umf1olT1Eg6AcLV4Tjvct4HoAOa3/ojXYIyfEkjKR2MdTZvEDhlyPZCl8oqGMZk+opunP8AbpyniBK981EAAAAASUVORK5CYII=');
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 2em;
+          width: 2em;}
+
+          span.success {
+          color: green;
+          }
+
+          span.failed {
+          color: red;
+          }
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <div class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAoCAIAAAAE3vEvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAWRSURBVGhD7Zh7KF9vHMddklxWNvesmE2R8AdGyT8Lkf1htPCPS/ki5R/KJZSUMoqUJia/KDWbtraJrcg9l3LJH0ORXBstbOZuvnuf83x8O3PO+foylz9+5/WHvp/385znnPM+z/N5Pg89tYJarbjAobjAobjAobjAobjAobjAcfUuHB0d1dfXV1ZWbm9vk8TTyEPBtbG8vFxSUvLx40eKdePqXSgsLNTjef78OUlq9eLiIhO/fftG0vXg4uLCbvT+/XuSdODqXcDLs+dwdXUlSa0eHx9n4vz8PEnXwO7urr6+PrtRUVERqTpw9S709vbevXvX2NhYOP9vxgWQk5MDI5ydnRcWFkjSgWvJjsfHxwcHBxTw3JgLADOCfunMtbgg5iZduAQ6uTA3N1dcXPz06VMfHx+kH39/f5VKhTyM7YB6/E1dXR36n5ycUCxwoays7L9Turu7Wev379+zsrI6Ozvx+8uXL7GxsZ6enkgroaGhtbW1bBzcC0u9oaGBv4IDenl5+bt37yiWZ3V1NS8v7+vXrxSLOMeFra2txMRETco5w8OHD9mjC9nZ2WGtk5OTJAlcEIJhf/z4gdaqqiqE3t7e8fHxrEkIPEWf/v5+/DYyMuLH48BbsQ7Nzc0kSYFbeHh4oFtCQgJJIrS5sLS0pNl48HGwD7e3t/f19b19+zY1NdXMzAy6gYEBqgO6gGdzc5NdgjcnSeBCVFQUXpWBPZW1VlRUsFaAYTMzM1+/fl1TUxMREeHo6Ih0iz5dXV2sA7sEYC6gAxQTE5OhoSFS/wYZKiwsDH1MTU2Fz3MGWRf29/e9vLxwPezXTEshKysrgYGB6GBoaDg4OEjqeS5I5gWNC/fu3RPOICFiFwDmna+vL0QbGxvJkdPS0tCKT9Xa2kqSFLIuYBHyN9VWfmC9YFGgT0BAAEn/5gK+P0kiJF0Aa2trDx48gO7u7o7nIZUH9Su7pLq6miQZpF3Y29vDno/rMW9JkgEeoZtwuV7aBcypX79+kSRCzgUwPT2NSYSmkJAQTcL+9OkTpgDE7OxspmhB2oWOjg7+jnpTU1MkyYCVguzV1tZG8T+4gGlFsRRaXADIVqjT0JqSkoJwbGyMpa2YmBjxWhYjPWh+fj6GcHJyovgiXNoFpCGKpdDuAnjz5g3rkJube//+ffxA2jpTvMkhPWhSUhJGwXZN8UW4LRcAihHWB6Dc2NjYoIbzkB702bNnGCg6Oprii3CLLmDLsLe3Z91evXpFqg5ID5qcnIyBkGwovgi35QJKA1S36IAsi78oIkZGRqjtPKQHZdukra0txRfhtlxgXw4vPzAwwColKyur2dlZataK9KCsXAXDw8MkybC4uGhnZyecNbfigqa6QV2L8OfPnxgN4aNHj9bX11kfLUgPil3XwcEBo4SHh5MkQ3p6OrpZW1tTfBsuoIRnTajxSeI/D8sRjx8/Rr4gVQbZCfby5Us2NB6RJBGYMmwRZmRkkHTjLnz+/Bk1G3TsaySdMjo6iuMDmvAtkTVIlULWhd+/fwcHB/P31cPx5sy/UgFO1hYWFmjFisDRmNSbdQHvaW5uDjEoKOjw8JBUAR8+fGAVpEqlIkkKWRcAyvInT57wt9ZDQR0XF/fixQuU+gUFBT4+Pky3tLScmJigC3huzIXV1VXkbyhubm5nThBC2OCgtLSUJBHaXACYSLgYr8oGOgOOyTh9U9dTcAZhU1SYn3EAhYLPIpw1GnBmRStKPYqlQJ5Gnzt37lB8WizKnSaFsJOln58fxSLOcYGxu7uLU1NOTg6mQ2RkJFZgVVWVlnv39PSIT7Lt7e3if8kwcIpvbGycmZmhWIaWlhZhCYAU3tTUNDc3R7E8WN3Nzc2X/1/T/wTFBQ7FBQ7FBQ7FBQ7FBQ7FBQ7FBbVarf4D7rHQkeEBPnMAAAAASUVORK5CYII=" alt="Citrix" height="30px"></div>
+            Citrix Optimizer Tool Report
+            </h1>
+      <div class="hr-solid"></div>
+      <table cellspacing="0" class="summary">
+        <tr>
+          <td>
+            <h2>Template:</h2>
+          </td>
+          <td class="right">
+            <h2>RS_W10_21H2_2009</h2>
+          </td>
+        </tr>
+      </table>
+      <div class="hotfix-col">
+        <table cellspacing="0" class="summary">
+          <tr>
+            <td>
+              <h2>Author:</h2>
+            </td>
+            <td class="right">
+              <h2>Luigi Arroyo</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Category:</h2>
+            </td>
+            <td class="right">
+              <h2>OS Optimizations</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Template Version:</h2>
+            </td>
+            <td class="right">
+              <h2>1.0</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Description:</h2>
+            </td>
+            <td class="right">
+              <h4>RapidScale W10 21H2 Optimizations</h4>
+            </td>
+          </tr>
+        </table>
+        <div class="hr-solid"></div>
+        <h2> Execution Summary </h2>
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <h3>Result:</h3>
+            </td>
+            <td class="right">
+              <div class="success"></div><span class="success"> Success! </span>Template has been processed successfully</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Mode:</h3>
+            </td>
+            <td class="right">
+              <h4>Execute</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Success:</h3>
+            </td>
+            <td class="right">143 / 155</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Failed:</h3>
+            </td>
+            <td class="right">0  / 155</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Skipped:</h3>
+            </td>
+            <td class="right">12 / 155</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Optimizer Version:</h3>
+            </td>
+            <td class="right">2.7</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Target Computer:</h3>
+            </td>
+            <td class="right">pkrvmldavfr4vr4</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Target Computer OS:</h3>
+            </td>
+            <td class="right">Windows 10 Enterprise for Virtual Desktops build 2009</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Start Time:</h3>
+            </td>
+            <td class="right">2022-08-16 23:14:39</td>
+          </tr>
+          <tr>
+            <td>
+              <h3>End Time:</h3>
+            </td>
+            <td class="right">2022-08-16 23:18:39</td>
+          </tr>
+        </table>
+        <div class="hr-solid"></div>
+        <h2> Execution Details </h2>
+        <p></p>
+        <h3>Disable Services</h3>
+    (Disable services that are not required for VDI\RDS virtual machines)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>AllJoyn Router Service</h3>Routes AllJoyn messages for the local AllJoyn clients.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>AJRouter</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Application Layer Gateway Service</h3>Provides support for 3rd party protocol plug-ins for Internet Connection Sharing.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>ALG</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>AVCTP service</h3>This is Audio Video Control Transport Protocol service</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>BthAvctpSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>BitLocker Drive Encryption Service</h3>BDESVC hosts the BitLocker Drive Encryption service. BitLocker Drive Encryption provides secure startup for the operating system, as well as full volume encryption for OS, fixed or removable volumes. This service allows BitLocker to prompt users for various actions related to their volumes when mounted, and unlocks volumes automatically without user interaction. Additionally, it stores recovery information to Active Directory, if available, and, if necessary, ensures the most recent recovery certificates are used.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>BDESVC</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Block Level Backup Engine Service</h3>The WBENGINE service is used by Windows Backup to perform backup and recovery operations.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>wbengine</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Bluetooth Audio Gateway Service</h3>Service supporting the audio gateway role of the Bluetooth Handsfree Profile.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>BTAGService</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Bluetooth Support Service</h3>The Bluetooth service supports discovery and association of remote Bluetooth devices.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>bthserv</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>BranchCache</h3>This service caches network content from peers on the local subnet.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>PeerDistSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Contact Data</h3>Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>PimIndexMaintenanceSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Data Usage</h3>Network data usage, data limit, restrict background data, metered networks.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>DusmSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Diagnostic Policy Service</h3>The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>DPS</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Diagnostic Service Host</h3>The Diagnostic Service Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local Service context.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WdiServiceHost</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Diagnostic System Host</h3>The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WdiSystemHost</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Distributed Link Tracking Client</h3>Maintains links between NTFS files within a computer or across computers in a network domain.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>TrkWks</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Downloaded Maps Manager</h3>Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>MapsBroker</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Encrypting File System (EFS)</h3>Provides the core file encryption technology used to store encrypted files on NTFS file system volumes.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>EFS</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Fax</h3>Enables you to send and receive faxes, utilizing fax resources available on this computer or on the network.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>Fax</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Function Discovery Provider Host</h3>The FDPHOST service hosts the Function Discovery (FD) network discovery providers. These FD providers supply network discovery services for the Simple Services Discovery Protocol (SSDP) and Web Services Discovery (WS-D) protocol. Stopping or disabling the FDPHOST service will disable network discovery for these protocols when using FD. When this service is unavailable, network services using FD and relying on these discovery protocols will be unable to find network devices or resources.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>fdPHost</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Function Discovery Resource Publication</h3>Publishes this computer and resources attached to this computer so they can be discovered over the network.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>FDResPub</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>GameDVR and Broadcast user service</h3>This user service is used for Game Recordings and Live Broadcasts</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>BcastDVRUserService</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Geolocation Service</h3>This service monitors the current location of the system and manages geofences (a geographical location with associated events).  If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>lfsvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Internet Connection Sharing (ICS)</h3>Provides network address translation, addressing, name resolution and/or intrusion prevention services for a home or small office network.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>SharedAccess</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>MessagingService</h3>Service supporting text messaging and related functionality.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>MessagingService</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Offline Files</h3>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>CscService</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Offline Files Driver</h3>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>CSC</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Parental Controls</h3>Enforces parental controls for child accounts in Windows. If this service is stopped or disabled, parental controls may not be enforced.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WpcMonSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Retail Demo Service</h3>The Retail Demo service controls device activity while the device is in retail demo mode.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>RetailDemo</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Sensor Monitoring Service</h3>Monitors various sensors in order to expose data and adapt to system and user state.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>SensrSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SSDP Discovery</h3>Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>SSDPSRV</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>UPnP Device Host</h3>Allows UPnP devices to be hosted on this computer.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>upnphost</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Volumetric Audio Compositor Service</h3>Hosts spatial analysis for Mixed Reality audio simulation.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>VacSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Windows Connect Now - Config Registrar</h3>WCNCSVC hosts the Windows Connect Now Configuration which is Microsoft's Implementation of Wi-Fi Protected Setup (WPS) protocol. This is used to configure Wireless LAN settings for an Access Point (AP) or a Wi-Fi Device. The service is started programmatically as needed.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>wcncsvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Windows Media Player Network Sharing Service</h3>Shares Windows Media Player libraries to other networked players and media devices using Universal Plug and Play.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WMPNetworkSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Windows Mobile Hotspot Service</h3>Provides the ability to share a cellular data connection with another device.
+Recommended by Microsoft to disable: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>icssvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>WLAN AutoConfig</h3>The WLANSVC service provides the logic required to configure, discover, connect to, and disconnect from a wireless local area network (WLAN) as defined by IEEE 802.11 standards. It also contains the logic to turn your computer into a software access point so that other devices or computers can connect to your computer wirelessly using a WLAN adapter that can support this.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WlanSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>WWAN AutoConfig</h3>This service manages mobile broadband (GSM and CDMA) data card/embedded module adapters and connections by auto-configuring the networks. It is strongly recommended that this service be kept running for best user experience of mobile broadband devices.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WwanSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Xbox Accessory Management Service</h3>This service manages connected Xbox Accessories.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>XboxGipSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Xbox Live Auth Manager</h3>Provides authentication and authorization services for interacting with Xbox Live.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>XblAuthManager</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Xbox Live Game Save</h3>This service syncs save data for Xbox Live save enabled games.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>XblGameSave</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Xbox Live Networking Service</h3>This service supports the Windows.Networking.XboxLive application programming interface.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Disabled</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>XboxNetApiSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Remove Built-in Apps</h3>
+    (Remove Windows Universal Apps to speed up logons.
+DOES NOT SUPPORT ROLLBACK!)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.BingWeather</h3>Microsoft.BingWeather</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.BingWeather</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.DesktopAppInstaller</h3>Microsoft.DesktopAppInstaller</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.DesktopAppInstaller</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.GetHelp</h3>Microsoft.GetHelp</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.GetHelp</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.Getstarted</h3>Microsoft.Getstarted</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Getstarted</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.HEIFImageExtension</h3>Adds support for High Efficiency Image File (HEIF) format, usually with .heif extension.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.HEIFImageExtension</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.Microsoft3DViewer</h3>Microsoft.Microsoft3DViewer</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Microsoft3DViewer</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.MicrosoftOfficeHub</h3>Microsoft.MicrosoftOfficeHub</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.MicrosoftOfficeHub</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.MicrosoftSolitaireCollection</h3>Microsoft.MicrosoftSolitaireCollection</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.MicrosoftSolitaireCollection</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.MicrosoftStickyNotes</h3>Microsoft.MicrosoftStickyNotes</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.MicrosoftStickyNotes</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.MixedReality.Portal</h3>Provides access to mixed reality games and VR experiences.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.MixedReality.Portal</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.MSPaint</h3>Microsoft.MSPaint</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.MSPaint</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.Office.OneNote</h3>Microsoft.Office.OneNote</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app is not installed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Office.OneNote</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.People</h3>Microsoft.People</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.People</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.SkypeApp</h3>Microsoft.SkypeApp</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.SkypeApp</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.Wallet</h3>Microsoft.Wallet</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Wallet</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WebMediaExtensions</h3>Microsoft.WebMediaExtensions</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WebMediaExtensions</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WebpImageExtension</h3>Adds support for image format WebP.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WebpImageExtension</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.Windows.Photos</h3>Microsoft.Windows.Photos</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Windows.Photos</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsAlarms</h3>Microsoft.WindowsAlarms</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsAlarms</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsCamera</h3>Microsoft.WindowsCamera</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsCamera</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsCommunicationsApps</h3>Disable Windows Mail and Calendar functionality</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>microsoft.windowscommunicationsapps</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsFeedbackHub</h3>Microsoft.WindowsFeedbackHub</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsFeedbackHub</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsMaps</h3>Microsoft.WindowsMaps</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsMaps</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.WindowsSoundRecorder</h3>Microsoft.WindowsSoundRecorder</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsSoundRecorder</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.Xbox.TCUI</h3>Microsoft.Xbox.TCUI</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.Xbox.TCUI</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.XboxApp</h3>Microsoft.XboxApp</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.XboxApp</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.XboxGameOverlay</h3>Microsoft.XboxGameOverlay</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.XboxGameOverlay</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.XboxGamingOverlay</h3>Microsoft.XboxGamingOverlay</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.XboxGamingOverlay</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.XboxIdentityProvider</h3>Microsoft.XboxIdentityProvider</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.XboxIdentityProvider</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.XboxSpeechToTextOverlay</h3>Microsoft.XboxSpeechToTextOverlay</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.XboxSpeechToTextOverlay</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.YourPhone</h3>Provides access to remotely send text messages or access images on Android-based phone.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.YourPhone</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.ZuneMusic</h3>Microsoft.ZuneMusic</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.ZuneMusic</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft.ZuneVideo</h3>Microsoft.ZuneVideo</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>UWP app has been removed</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.ZuneVideo</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Disable Scheduled Tasks</h3>
+    (Disable scheduled tasks that are not required for VDI\RDS virtual machines)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>AnalyzeSystem</h3>This job analyzes the system looking for conditions that may cause high energy use.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Power Efficiency Diagnostics</p>
+              <p><b> - Name: </b>AnalyzeSystem</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>BfeOnServiceStartTypeChange</h3>Adjusts the start type for firewall-triggered services when the start type of the Base Filtering Engine (BFE) is disabled.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Windows Filtering Platform</p>
+              <p><b> - Name: </b>BfeOnServiceStartTypeChange</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Cellular</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Management\Provisioning\</p>
+              <p><b> - Name: </b>Cellular</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Consolidator</h3>Collects and sends usage data to Microsoft if opted-in to the Windows Customer Experience Improvement Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Customer Experience Improvement Program</p>
+              <p><b> - Name: </b>Consolidator</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Diagnostics</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\DiskFootprint\</p>
+              <p><b> - Name: </b>Diagnostics</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>FamilySafetyMonitor</h3>Initializes Family Safety monitoring and enforcement.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Shell</p>
+              <p><b> - Name: </b>FamilySafetyMonitor</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>FamilySafetyRefresh</h3>Synchronizes the latest settings with the Microsoft family features service.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Shell</p>
+              <p><b> - Name: </b>FamilySafetyRefreshTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>File History (maintenance mode)</h3>Protects user files from accidental loss by copying them to a backup location when the system is unattended.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\FileHistory</p>
+              <p><b> - Name: </b>File History (maintenance mode)</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Location - Actions Dialog</h3>Location - Actions Dialog</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Location</p>
+              <p><b> - Name: </b>WindowsActionDialog</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Location - Notifications</h3>Location - Notifications</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Location</p>
+              <p><b> - Name: </b>Notifications</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>MapsToastTask</h3>MapsToastTask</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Maps</p>
+              <p><b> - Name: </b>MapsToastTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>MapsUpdateTask</h3>MapsUpdateTask</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task already Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Maps</p>
+              <p><b> - Name: </b>MapsUpdateTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft Compatibility Appraiser</h3>Aggregates and uploads Application Telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Application Experience</p>
+              <p><b> - Name: </b>Microsoft Compatibility Appraiser</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft-Windows-DiskDiagnosticDataCollector</h3>Reports general disk and system information to Microsoft for users participating in the Customer Experience Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\DiskDiagnostic</p>
+              <p><b> - Name: </b>Microsoft-Windows-DiskDiagnosticDataCollector</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Microsoft-Windows-DiskDiagnosticResolver</h3>Warns users about faults reported by hard disks that support the Self Monitoring and Reporting Technology (S.M.A.R.T.) standard. This task is triggered automatically by the Diagnostic Policy Service when a S.M.A.R.T. fault is detected.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task already Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\DiskDiagnostic</p>
+              <p><b> - Name: </b>Microsoft-Windows-DiskDiagnosticResolver</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Mobile Broadband Accounts</h3>Mobile Broadband Accounts</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Mobile Broadband Accounts</p>
+              <p><b> - Name: </b>MNO Metadata Parser</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>NotificationTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\WwanSvc\</p>
+              <p><b> - Name: </b>NotificationTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ProactiveScan</h3>NTFS volume health scan.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\CHKDSK</p>
+              <p><b> - Name: </b>ProactiveScan</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ProcessMemoryDiagnosticEvents</h3>Schedules a memory diagnostic in response to system events.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\MemoryDiagnostic</p>
+              <p><b> - Name: </b>ProcessMemoryDiagnosticEvents</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ProgramDataUpdater</h3>Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Application Experience</p>
+              <p><b> - Name: </b>ProgramDataUpdater</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Proxy</h3>Collects and uploads autochk SQM data if opted-in to the Microsoft Customer Experience Improvement Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Autochk</p>
+              <p><b> - Name: </b>Proxy</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>RecommendedTroubleshootingScanner</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Diagnosis\</p>
+              <p><b> - Name: </b>RecommendedTroubleshootingScanner</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ReconcileFeatures</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Flighting\FeatureConfig\</p>
+              <p><b> - Name: </b>ReconcileFeatures</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ReconcileLanguageResources</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\LanguageComponentsInstaller\</p>
+              <p><b> - Name: </b>ReconcileLanguageResources</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>RefreshCache</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Flighting\OneSettings\</p>
+              <p><b> - Name: </b>RefreshCache</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>RegIdleBackup</h3>Registry idle backup task.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Registry</p>
+              <p><b> - Name: </b>RegIdleBackup</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ResolutionHost</h3>The Windows Diagnostic Infrastructure Resolution host enables interactive resolutions for system problems detected by the Diagnostic Policy Service. It is triggered when necessary by the Diagnostic Policy Service in the appropriate user session. If the Diagnostic Policy Service is not running, the task will not run.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\WDI</p>
+              <p><b> - Name: </b>ResolutionHost</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ResPriStaticDbSync</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Sysmain\</p>
+              <p><b> - Name: </b>ResPriStaticDbSync</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>RunFullMemoryDiagnostic</h3>Detects and mitigates problems in physical memory (RAM).</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\MemoryDiagnostic</p>
+              <p><b> - Name: </b>RunFullMemoryDiagnostic</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ScanForUpdates</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\InstallService\</p>
+              <p><b> - Name: </b>ScanForUpdates</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ScanForUpdatesAsUser</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\InstallService\</p>
+              <p><b> - Name: </b>ScanForUpdatesAsUser</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Scheduled</h3>Performs periodic maintenance of the computer system by fixing problems automatically or reporting them through the Action Center.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Diagnosis</p>
+              <p><b> - Name: </b>Scheduled</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>ScheduledDefrag</h3>This task defragments the computers hard disk drives.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Defrag</p>
+              <p><b> - Name: </b>ScheduledDefrag</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SilentCleanup</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\DiskCleanup\</p>
+              <p><b> - Name: </b>SilentCleanup</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SmartRetry</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\InstallService\</p>
+              <p><b> - Name: </b>SmartRetry</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SpaceAgentTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\SpacePort\</p>
+              <p><b> - Name: </b>SpaceAgentTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SpaceManagerTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\SpacePort\</p>
+              <p><b> - Name: </b>SpaceManagerTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SpeechModelDownloadTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Speech\</p>
+              <p><b> - Name: </b>SpeechModelDownloadTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Sqm-Tasks</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\PI\</p>
+              <p><b> - Name: </b>Sqm-Tasks</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>SR</h3>This task creates regular system protection points.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\SystemRestore</p>
+              <p><b> - Name: </b>SR</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>StartComponentCleanup</h3>This job clean up components automatically when the system is not in use. This task is known to cause excessive CPU usage.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Servicing</p>
+              <p><b> - Name: </b>StartComponentCleanup</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>StartupAppTask</h3>Scans startup entries and raises notification to the user if there are too many startup entries.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Application Experience</p>
+              <p><b> - Name: </b>StartupAppTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>StorageSense</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\DiskFootprint\</p>
+              <p><b> - Name: </b>StorageSense</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>UninstallDeviceTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Bluetooth\</p>
+              <p><b> - Name: </b>UninstallDeviceTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>UsbCeip</h3>Collects Universal Serial Bus related statistics and information about your machine and sends to the Windows Device Connectivity engineering group at Microsoft, if opted-in to Windows Customer Experience Improvement Program.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Customer Experience Improvement Program</p>
+              <p><b> - Name: </b>UsbCeip</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Usb-Notifications</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\USB\</p>
+              <p><b> - Name: </b>Usb-Notifications</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>VerifyWinRE</h3>Validates the Windows Recovery Environment.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\RecoveryEnvironment</p>
+              <p><b> - Name: </b>VerifyWinRE</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>WIM-Hash-Management</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\WOF\</p>
+              <p><b> - Name: </b>WIM-Hash-Management</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Windows Error Reporting</h3>Windows Error Reporting task to process queued reports.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Windows Error Reporting</p>
+              <p><b> - Name: </b>QueueReporting</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Windows Media Sharing</h3>This task updates the cached list of folders and the security permissions on any new files in a user's shared media library.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Windows Media Sharing</p>
+              <p><b> - Name: </b>UpdateLibrary</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>WinSAT</h3>Measures a system's performance and capabilities.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Maintenance</p>
+              <p><b> - Name: </b>WinSAT</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>WsSwapAssessmentTask</h3>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: <span></span><a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909" target="_blank">https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</a></td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\Windows\Sysmain\</p>
+              <p><b> - Name: </b>WsSwapAssessmentTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>XblGameSaveTask</h3>XblGameSave Standby Task</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Scheduled Task has been Disabled</p>
+              <p><b>Module type: </b>SchTasks</p>
+              <p><b> - Location: </b>\Microsoft\XblGameSave</p>
+              <p><b> - Name: </b>XblGameSaveTask</p>
+              <p><b> - State: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Miscellaneous</h3>
+    (Various optimizations and tweaks for VDI\RDS virtual machines)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>DeleteUserAppContainersOnLogoff</h3>When new user logs in to Windows OS, new per-user firewall rules are created. These rules are not deleted when user logs off.
+
+This can have significant impact on performance.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 1 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy</p>
+              <p><b> - Value: </b>DeleteUserAppContainersOnLogoff (Dword)
+            </p>
+              <p><b> - Data: </b>1</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable background auto-layout</h3>Disabling background auto-layout can help improve EWF performance.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout</p>
+              <p><b> - Value: </b>EnableAutoLayout (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable background disk defragmentation</h3>Disabling background disk defragmentation can help improve EWF performance.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value N is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction</p>
+              <p><b> - Value: </b>Enable (String)
+            </p>
+              <p><b> - Data: </b>N</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable default system screensaver</h3>Disable default system logon screensaver.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKU\.DEFAULT\Control Panel\Desktop</p>
+              <p><b> - Value: </b>ScreenSaveActive (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable Hibernate</h3>Disable Hibernate.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SYSTEM\CurrentControlSet\Control\Power</p>
+              <p><b> - Value: </b>HibernateEnabled (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable memory dump creation</h3>Disable memory dump creation.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SYSTEM\CurrentControlSet\Control\CrashControl</p>
+              <p><b> - Value: </b>CrashDumpEnabled (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable NTFS last access timestamps</h3>If you are using NTFS, you can increase the performance of EWF by disabling the last access date/time stamps.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 2147483651 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SYSTEM\CurrentControlSet\Control\FileSystem</p>
+              <p><b> - Value: </b>NtfsDisableLastAccessUpdate (Dword)
+            </p>
+              <p><b> - Data: </b>2147483651</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable Storage Sense</h3>Disable Storage Sense.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Policies\Microsoft\Windows\StorageSense</p>
+              <p><b> - Value: </b>AllowStorageSenseGlobal (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Disable the Windows First Logon Animation</h3>Disable the Windows First Logon Animation.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</p>
+              <p><b> - Value: </b>EnableFirstLogonAnimation (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Hide hard error messages</h3>Disable system hard error messages.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 2 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\System\CurrentControlSet\Control\Windows</p>
+              <p><b> - Value: </b>ErrorMode (DWORD)
+            </p>
+              <p><b> - Data: </b>2</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Increase Disk I/O Timeout to 200 seconds</h3>Increase Disk I/O Timeout to 200 seconds.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 200 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SYSTEM\CurrentControlSet\Services\Disk</p>
+              <p><b> - Value: </b>TimeOutValue (DWORD)
+            </p>
+              <p><b> - Data: </b>0x000000C8</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Set power plan to High Performance</h3>Change current power plan to "High performance". If you rollback these changes, power plan will default to "Balanced".</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Mode already configured, skipping</p>
+              <p><b>Module type: </b>PowerShell</p>
+              <p><b>PowerShell code is not included in generated HTML report. To see it, please review the configuration of original template</b></p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Turn off Cortana</h3>Turn off Cortana.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Requested value 0 is configured</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search</p>
+              <p><b> - Value: </b>AllowCortana (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Windows Update</h3>Enables the detection, download, and installation of updates for Windows and other programs.
+NOTE: This read-only entry is analyzing if Windows Update has been disabled using Group Policy. This entry does NOT support disabling Windows Update.
+All of the relevant policies are under the path Computer configuration - Administrative Templates - Windows Components - Windows Update.
+For more information, please refer to official Microsoft documentation: <span></span><a href="https://docs.microsoft.com/en-us/windows/deployment/update/waas-wufb-group-policy&#xA;" target="_blank">https://docs.microsoft.com/en-us/windows/deployment/update/waas-wufb-group-policy
+</a>     </td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>This entry does not support execute mode, skipping</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU</p>
+              <p><b> - Value: </b>NoAutoUpdate (DWORD)
+            </p>
+              <p><b> - Data: </b>1</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Maintenance Tasks</h3>
+    (This group contains maintenance tasks and optimizations that should be executed every time this image is updated.)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Clear All Event Logs</h3>Clear all event logs</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Successfully cleaned the event logs</p>
+              <p><b>Module type: </b>PowerShell</p>
+              <p><b>PowerShell code is not included in generated HTML report. To see it, please review the configuration of original template</b></p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Native Image Generation 32bit (NGEN)</h3>
+        THIS IS SLOW, it's normal for this operation to take a long time. This optimization pre-compiles .NET assemblies instead of using the just-in-time compilation using NGEN.exe.
+        Does not support analyze/rollback modes, but it is generally safe to use.
+     </td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>.NET assemblies optimized</p>
+              <p><b>Module type: </b>PowerShell</p>
+              <p><b>PowerShell code is not included in generated HTML report. To see it, please review the configuration of original template</b></p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Native Image Generation 64bit (NGEN)</h3>
+        THIS IS SLOW, it's normal for this operation to take a long time. This optimization pre-compiles .NET assemblies instead of using the just-in-time compilation using NGEN.exe.
+        Does not support analyze/rollback modes, but it is generally safe to use.
+     </td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>.NET assemblies optimized</p>
+              <p><b>Module type: </b>PowerShell</p>
+              <p><b>PowerShell code is not included in generated HTML report. To see it, please review the configuration of original template</b></p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Optional Components</h3>
+    (Contains components that are often disabled for VDI\RDS machines, however can impact other applications or user experience. It is recommended to review these settings before applying them.)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Disable Windows Customer Experience Improvement program</h3>Disable Windows Customer Experience Improvement program.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>Registry</p>
+              <p><b> - Key: </b>HKLM\SOFTWARE\Microsoft\SQMClient\Windows</p>
+              <p><b> - Value: </b>CEIPEnable (DWORD)
+            </p>
+              <p><b> - Data: </b>0</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.ScreenSketch</h3>Removes "Snip and Sketch" application. Provides functionality of Snipping Tool with additional improvements.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.ScreenSketch</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.StorePurchaseApp</h3>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.StorePurchaseApp</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.VP9VideoExtensions</h3>Adds support for video codec VP9 (part of WebM project by Google)
+
+Note: This is required to support HDR video streaming</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.VP9VideoExtensions</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.WindowsCalculator</h3>Built-in Windows Calculator. If your users are using it (mostly desktop sessions rather than published applications), do not remove it unless you have a replacement calculator app.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsCalculator</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Microsoft.WindowsStore</h3>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>UWP</p>
+              <p><b> - Name: </b>Microsoft.WindowsStore</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Superfetch</h3>Maintains and improves system performance over time. If optimizing a persistent machine you may leave Superfetch enabled. If optimizing a non-persistent machine, disable it.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>SysMain</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Windows Error Reporting Service</h3>Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. Disable it if logs are not being gathered and analyzed.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WerSvc</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" disabled></td>
+            <td>
+              <h3>Windows Search</h3>Provides content indexing, property caching, and search results for files, e-mail, and other content. Consider disabling it as it has a high impact on server density.</td>
+            <td class="center">
+            -- Not Analyzed
+          </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Entry is not marked for execution, skipping</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>WSearch</p>
+              <p><b> - Value: </b>Disabled</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p></p>
+        <h3>Rollback</h3>
+    (Contains optimizations for which recommendations have changed, for example for compatibility reasons. This reverts those changes to original state.)
+    <p></p>
+        <table cellspacing="0">
+          <tr>
+            <th class="alt"></th>
+            <th class="alt center" style="width:75%">
+          Optimization
+        </th>
+            <th class="center" style="width:25%">
+          Current status
+        </th>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Connected User Experiences and Telemetry</h3>11/17/2020 - Stopping this service prevents Microsoft Defender ATP from working properly.
+
+This entry restores the system to the original state and fixes this issue.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Automatic</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>DiagTrack</p>
+              <p><b> - Value: </b>Automatic</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Optimize drives</h3>11/17/2020 - Disabling this service prevents defragmentation (UI) from working.
+
+This entry restores the system to the original state and fixes this issue.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Manual</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>defragsvc</p>
+              <p><b> - Value: </b>Manual</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="entry">
+            <td class="center"><input type="checkbox" checked disabled></td>
+            <td>
+              <h3>Shell Hardware Detection</h3>11/17/2020 - Disabling this service impacts some UI elements (e.g. Format menu for DVD writers) and can also cause event log entries by AppX packages.
+
+This entry restores the system to the original state and fixes this issue.</td>
+            <td class="center">
+              <div class="optimized"></div>
+                Optimized
+              </td>
+          </tr>
+          <tr class="entry">
+            <td class="center"></td>
+            <td>
+              <p><b>Details: </b>Startup type is Automatic</p>
+              <p><b>Module type: </b>Services</p>
+              <p><b> - Name: </b>ShellHWDetection</p>
+              <p><b> - Value: </b>Automatic</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

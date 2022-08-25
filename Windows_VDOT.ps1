@@ -498,7 +498,7 @@ PROCESS {
         # NIC Advanced Properties performance settings for network biased environments
         Write-EventLog -EventId 70 -Message "Configuring Network Adapter Buffer Size" -LogName 'Virtual Desktop Optimization' -Source 'NetworkOptimizations' -EntryType Information
         Write-Host "[VDI Optimize] Configuring Network Adapter Buffer Size" -ForegroundColor Cyan
-        Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB -NoRestart
+        #Set-NetAdapterAdvancedProperty -DisplayName "Send Buffer Size" -DisplayValue 4MB -NoRestart
         <#  NOTE:
             Note that the above setting is for a Microsoft Hyper-V VM.  You can adjust these values in your environment...
             by querying in PowerShell using Get-NetAdapterAdvancedProperty, and then adjusting values using the...
@@ -697,3 +697,4 @@ PROCESS {
     }
     ########################  END OF SCRIPT  ########################
 }
+

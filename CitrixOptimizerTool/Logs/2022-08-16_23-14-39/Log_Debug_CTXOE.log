@@ -1,0 +1,2753 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220816231439
+Username: pkrvmldavfr4vr4\packer
+RunAs User: pkrvmldavfr4vr4\packer
+Configuration Name: 
+Machine: pkrvmldavfr4vr4 (Microsoft Windows NT 10.0.19044.0)
+Host Application: powershell -executionpolicy bypass & { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62fc243b-895f-01fd-bfe6-6398eb46d3fd.ps1; &'c:/Windows/Temp/script-62fc243b-5750-d21b-6a13-ff040677c385.ps1'; exit $LastExitCode }
+Process ID: 7004
+PSVersion: 5.1.19041.1682
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1682
+BuildVersion: 10.0.19041.1682
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Checking permissions
+
+Processing definition file C:\RSadmin\AVD-Optimizations-main\CitrixOptimizerTool\Templates\RS_W10_21H2_Optimizations.xml
+Adding CTXOE modules
+
+
+
+schemaversion  2.0
+version        1.0
+id             833B897F-3195-4D3C-869E-82D03842F588
+displayname    RS_W10_21H2_2009
+description    RapidScale W10 21H2 Optimizations
+category       OS Optimizations
+author         Luigi Arroyo
+lastupdatedate 8/09/2022
+
+
+
+        Group: Disable Services
+        Group ID: DisableServices
+            AllJoyn Router Service -
+Startup type is Disabled
+            Application Layer Gateway Service -
+Startup type is Disabled
+            AVCTP service -
+Startup type is Disabled
+            BitLocker Drive Encryption Service -
+Startup type is Disabled
+            Block Level Backup Engine Service -
+Startup type is Disabled
+            Bluetooth Audio Gateway Service -
+Startup type is Disabled
+            Bluetooth Support Service -
+Startup type is Disabled
+            BranchCache -
+Startup type is Disabled
+            Contact Data -
+Startup type is Disabled
+            Data Usage -
+Startup type is Disabled
+            Diagnostic Policy Service -
+Startup type is Disabled
+            Diagnostic Service Host -
+Startup type is Disabled
+            Diagnostic System Host -
+Startup type is Disabled
+            Distributed Link Tracking Client -
+Startup type is Disabled
+            Downloaded Maps Manager -
+Startup type is Disabled
+            Encrypting File System (EFS) -
+Startup type is Disabled
+            Fax -
+Startup type is Disabled
+            Function Discovery Provider Host -
+Startup type is Disabled
+            Function Discovery Resource Publication -
+Startup type is Disabled
+            GameDVR and Broadcast user service -
+Startup type is Disabled
+            Geolocation Service -
+Startup type is Disabled
+            Internet Connection Sharing (ICS) -
+Startup type is Disabled
+            MessagingService -
+Startup type is Disabled
+            Offline Files -
+Startup type is Disabled
+            Offline Files Driver -
+Startup type is Disabled
+            Parental Controls -
+Startup type is Disabled
+            Retail Demo Service -
+Startup type is Disabled
+            Sensor Monitoring Service -
+Startup type is Disabled
+            SSDP Discovery -
+Startup type is Disabled
+            UPnP Device Host -
+Startup type is Disabled
+            Volumetric Audio Compositor Service -
+Startup type is Disabled
+            Windows Connect Now - Config Registrar -
+Startup type is Disabled
+            Windows Media Player Network Sharing Service -
+Startup type is Disabled
+            Windows Mobile Hotspot Service -
+Startup type is Disabled
+            WLAN AutoConfig -
+Startup type is Disabled
+            WWAN AutoConfig -
+Startup type is Disabled
+            Xbox Accessory Management Service -
+Startup type is Disabled
+            Xbox Live Auth Manager -
+Startup type is Disabled
+            Xbox Live Game Save -
+Startup type is Disabled
+            Xbox Live Networking Service -
+Startup type is Disabled
+
+        Group: Remove Built-in Apps
+        Group ID: RemoveApplications
+            Microsoft.BingWeather -
+Removal of already provisioned applications supported: True
+UWP app has been removed
+            Microsoft.DesktopAppInstaller -
+UWP app has been removed
+            Microsoft.GetHelp -
+UWP app has been removed
+            Microsoft.Getstarted -
+UWP app has been removed
+            Microsoft.HEIFImageExtension -
+UWP app has been removed
+            Microsoft.Microsoft3DViewer -
+UWP app has been removed
+            Microsoft.MicrosoftOfficeHub -
+UWP app has been removed
+            Microsoft.MicrosoftSolitaireCollection -
+UWP app has been removed
+            Microsoft.MicrosoftStickyNotes -
+ Entry is not marked for execution, skipping
+            Microsoft.MixedReality.Portal -
+UWP app has been removed
+            Microsoft.MSPaint -
+UWP app has been removed
+            Microsoft.Office.OneNote -
+UWP app is not installed
+            Microsoft.People -
+UWP app has been removed
+            Microsoft.SkypeApp -
+UWP app has been removed
+            Microsoft.Wallet -
+UWP app has been removed
+            Microsoft.WebMediaExtensions -
+UWP app has been removed
+            Microsoft.WebpImageExtension -
+UWP app has been removed
+            Microsoft.Windows.Photos -
+ Entry is not marked for execution, skipping
+            Microsoft.WindowsAlarms -
+UWP app has been removed
+            Microsoft.WindowsCamera -
+UWP app has been removed
+            Microsoft.WindowsCommunicationsApps -
+UWP app has been removed
+            Microsoft.WindowsFeedbackHub -
+UWP app has been removed
+            Microsoft.WindowsMaps -
+UWP app has been removed
+            Microsoft.WindowsSoundRecorder -
+UWP app has been removed
+            Microsoft.Xbox.TCUI -
+UWP app has been removed
+            Microsoft.XboxApp -
+UWP app has been removed
+            Microsoft.XboxGameOverlay -
+UWP app has been removed
+            Microsoft.XboxGamingOverlay -
+UWP app has been removed
+            Microsoft.XboxIdentityProvider -
+UWP app has been removed
+            Microsoft.XboxSpeechToTextOverlay -
+UWP app has been removed
+            Microsoft.YourPhone -
+UWP app has been removed
+            Microsoft.ZuneMusic -
+UWP app has been removed
+            Microsoft.ZuneVideo -
+UWP app has been removed
+
+        Group: Disable Scheduled Tasks
+        Group ID: DisableScheduledTasks
+            AnalyzeSystem -
+Scheduled Task has been Disabled
+            BfeOnServiceStartTypeChange -
+Scheduled Task has been Disabled
+            Cellular -
+Scheduled Task has been Disabled
+            Consolidator -
+Scheduled Task has been Disabled
+            Diagnostics -
+Scheduled Task has been Disabled
+            FamilySafetyMonitor -
+Scheduled Task has been Disabled
+            FamilySafetyRefresh -
+Scheduled Task has been Disabled
+            File History (maintenance mode) -
+Scheduled Task has been Disabled
+            Location - Actions Dialog -
+Scheduled Task has been Disabled
+            Location - Notifications -
+Scheduled Task has been Disabled
+            MapsToastTask -
+Scheduled Task has been Disabled
+            MapsUpdateTask -
+Scheduled Task already Disabled
+            Microsoft Compatibility Appraiser -
+Scheduled Task has been Disabled
+            Microsoft-Windows-DiskDiagnosticDataCollector -
+Scheduled Task has been Disabled
+            Microsoft-Windows-DiskDiagnosticResolver -
+Scheduled Task already Disabled
+            Mobile Broadband Accounts -
+Scheduled Task has been Disabled
+            NotificationTask -
+Scheduled Task has been Disabled
+            ProactiveScan -
+Scheduled Task has been Disabled
+            ProcessMemoryDiagnosticEvents -
+Scheduled Task has been Disabled
+            ProgramDataUpdater -
+Scheduled Task has been Disabled
+            Proxy -
+Scheduled Task has been Disabled
+            RecommendedTroubleshootingScanner -
+Scheduled Task has been Disabled
+            ReconcileFeatures -
+Scheduled Task has been Disabled
+            ReconcileLanguageResources -
+Scheduled Task has been Disabled
+            RefreshCache -
+Scheduled Task has been Disabled
+            RegIdleBackup -
+Scheduled Task has been Disabled
+            ResolutionHost -
+Scheduled Task has been Disabled
+            ResPriStaticDbSync -
+Scheduled Task has been Disabled
+            RunFullMemoryDiagnostic -
+Scheduled Task has been Disabled
+            ScanForUpdates -
+Scheduled Task has been Disabled
+            ScanForUpdatesAsUser -
+Scheduled Task has been Disabled
+            Scheduled -
+Scheduled Task has been Disabled
+            ScheduledDefrag -
+Scheduled Task has been Disabled
+            SilentCleanup -
+Scheduled Task has been Disabled
+            SmartRetry -
+Scheduled Task has been Disabled
+            SpaceAgentTask -
+Scheduled Task has been Disabled
+            SpaceManagerTask -
+Scheduled Task has been Disabled
+            SpeechModelDownloadTask -
+Scheduled Task has been Disabled
+            Sqm-Tasks -
+Scheduled Task has been Disabled
+            SR -
+Scheduled Task has been Disabled
+            StartComponentCleanup -
+Scheduled Task has been Disabled
+            StartupAppTask -
+Scheduled Task has been Disabled
+            StorageSense -
+Scheduled Task has been Disabled
+            UninstallDeviceTask -
+Scheduled Task has been Disabled
+            UsbCeip -
+Scheduled Task has been Disabled
+            Usb-Notifications -
+Scheduled Task has been Disabled
+            VerifyWinRE -
+Scheduled Task has been Disabled
+            WIM-Hash-Management -
+Scheduled Task has been Disabled
+            Windows Error Reporting -
+Scheduled Task has been Disabled
+            Windows Media Sharing -
+Scheduled Task has been Disabled
+            WinSAT -
+Scheduled Task has been Disabled
+            WsSwapAssessmentTask -
+Scheduled Task has been Disabled
+            XblGameSaveTask -
+Scheduled Task has been Disabled
+
+        Group: Miscellaneous
+        Group ID: Miscellaneous
+            DeleteUserAppContainersOnLogoff -
+Requested value 1 is configured
+            Disable background auto-layout -
+Requested value 0 is configured
+            Disable background disk defragmentation -
+Requested value N is configured
+            Disable default system screensaver -
+Requested value 0 is configured
+            Disable Hibernate -
+Requested value 0 is configured
+            Disable memory dump creation -
+Requested value 0 is configured
+            Disable NTFS last access timestamps -
+Requested value 2147483651 is configured
+            Disable Storage Sense -
+Requested value 0 is configured
+            Disable the Windows First Logon Animation -
+Requested value 0 is configured
+            Hide hard error messages -
+Requested value 2 is configured
+            Increase Disk I/O Timeout to 200 seconds -
+Requested value 200 is configured
+            Set power plan to High Performance -
+Mode already configured, skipping
+            Turn off Cortana -
+Requested value 0 is configured
+            Windows Update -
+    This entry does not support execute mode, skipping
+
+        Group: Maintenance Tasks
+        Group ID: MaintenanceTasks
+            Clear All Event Logs -
+Clear event logs
+Clearing AMSI/Debug
+
+Clearing AirSpaceChannel
+
+Clearing Analytic
+
+Clearing Application
+
+Clearing DirectShowFilterGraph
+
+Clearing DirectShowPluginControl
+
+Clearing Els_Hyphenation/Analytic
+
+Clearing EndpointMapper
+
+Clearing FirstUXPerf-Analytic
+
+Clearing ForwardedEvents
+
+Clearing General Logging
+
+Clearing HardwareEvents
+
+Clearing IHM_DebugChannel
+
+Clearing Intel-iaLPSS-GPIO/Analytic
+
+Clearing Intel-iaLPSS-I2C/Analytic
+
+Clearing Intel-iaLPSS2-GPIO2/Debug
+
+Clearing Intel-iaLPSS2-GPIO2/Performance
+
+Clearing Intel-iaLPSS2-I2C/Debug
+
+Clearing Intel-iaLPSS2-I2C/Performance
+
+Clearing Internet Explorer
+
+Clearing Key Management Service
+
+Clearing MF_MediaFoundationDeviceMFT
+
+Clearing MF_MediaFoundationDeviceProxy
+
+Clearing MF_MediaFoundationFrameServer
+
+Clearing MedaFoundationVideoProc
+
+Clearing MedaFoundationVideoProcD3D
+
+Clearing MediaFoundationAsyncWrapper
+
+Clearing MediaFoundationContentProtection
+
+Clearing MediaFoundationDS
+
+Clearing MediaFoundationDeviceProxy
+
+Clearing MediaFoundationMP4
+
+Clearing MediaFoundationMediaEngine
+
+Clearing MediaFoundationPerformance
+
+Clearing MediaFoundationPerformanceCore
+
+Clearing MediaFoundationPipeline
+
+Clearing MediaFoundationPlatform
+
+Clearing MediaFoundationSrcPrefetch
+
+Clearing Microsoft-AppV-Client-Streamingux/Debug
+
+Clearing Microsoft-AppV-Client/Admin
+
+Clearing Microsoft-AppV-Client/Debug
+
+Clearing Microsoft-AppV-Client/Operational
+
+Clearing Microsoft-AppV-Client/Virtual Applications
+
+Clearing Microsoft-AppV-SharedPerformance/Analytic
+
+Clearing Microsoft-Client-License-Flexible-Platform/Admin
+
+Clearing Microsoft-Client-License-Flexible-Platform/Debug
+
+Clearing Microsoft-Client-License-Flexible-Platform/Diagnostic
+
+Clearing Microsoft-Client-Licensing-Platform/Admin
+
+Clearing Microsoft-Client-Licensing-Platform/Debug
+
+Clearing Microsoft-Client-Licensing-Platform/Diagnostic
+
+Clearing Microsoft-FSLogix-Apps/Admin
+
+Clearing Microsoft-FSLogix-Apps/Operational
+
+Clearing Microsoft-FSLogix-CloudCache/Admin
+
+Clearing Microsoft-FSLogix-CloudCache/Operational
+
+Clearing Microsoft-IE/Diagnostic
+
+Clearing Microsoft-IEFRAME/Diagnostic
+
+Clearing Microsoft-JSDumpHeap/Diagnostic
+
+Clearing Microsoft-OneCore-Setup/Analytic
+
+Clearing Microsoft-PerfTrack-IEFRAME/Diagnostic
+
+Clearing Microsoft-PerfTrack-MSHTML/Diagnostic
+
+Clearing Microsoft-User Experience Virtualization-Admin/Debug
+
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Debug
+
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Operational
+
+Clearing Microsoft-User Experience Virtualization-App Agent/Analytic
+
+Clearing Microsoft-User Experience Virtualization-App Agent/Debug
+
+Clearing Microsoft-User Experience Virtualization-App Agent/Operational
+
+Clearing Microsoft-User Experience Virtualization-IPC/Operational
+
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Analytic
+
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Debug
+
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Operational
+
+Clearing Microsoft-Windows-AAD/Analytic
+
+Clearing Microsoft-Windows-AAD/Operational
+
+Clearing Microsoft-Windows-ADSI/Debug
+
+Clearing Microsoft-Windows-ASN1/Operational
+
+Clearing Microsoft-Windows-ATAPort/General
+
+Clearing Microsoft-Windows-ATAPort/SATA-LPM
+
+Clearing Microsoft-Windows-ActionQueue/Analytic
+
+Clearing Microsoft-Windows-All-User-Install-Agent/Admin
+
+Clearing Microsoft-Windows-AllJoyn/Debug
+
+Clearing Microsoft-Windows-AllJoyn/Operational
+
+Clearing Microsoft-Windows-AppHost/Admin
+
+Clearing Microsoft-Windows-AppHost/ApplicationTracing
+
+Clearing Microsoft-Windows-AppHost/Diagnostic
+
+Clearing Microsoft-Windows-AppHost/Internal
+
+Clearing Microsoft-Windows-AppID/Operational
+
+Clearing Microsoft-Windows-AppLocker/EXE and DLL
+
+Clearing Microsoft-Windows-AppLocker/MSI and Script
+
+Clearing Microsoft-Windows-AppLocker/Packaged app-Deployment
+
+Clearing Microsoft-Windows-AppLocker/Packaged app-Execution
+
+Clearing Microsoft-Windows-AppModel-Runtime/Admin
+
+Clearing Microsoft-Windows-AppModel-Runtime/Analytic
+
+Clearing Microsoft-Windows-AppModel-Runtime/Debug
+
+Clearing Microsoft-Windows-AppModel-Runtime/Diagnostics
+
+Clearing Microsoft-Windows-AppModel-State/Debug
+
+Clearing Microsoft-Windows-AppModel-State/Diagnostic
+
+Clearing Microsoft-Windows-AppReadiness/Admin
+
+Clearing Microsoft-Windows-AppReadiness/Debug
+
+Clearing Microsoft-Windows-AppReadiness/Operational
+
+Clearing Microsoft-Windows-AppSruProv
+
+Clearing Microsoft-Windows-AppXDeployment/Diagnostic
+
+Clearing Microsoft-Windows-AppXDeployment/Operational
+
+Clearing Microsoft-Windows-AppXDeploymentServer/Debug
+
+Clearing Microsoft-Windows-AppXDeploymentServer/Diagnostic
+
+Clearing Microsoft-Windows-AppXDeploymentServer/Operational
+
+Clearing Microsoft-Windows-AppXDeploymentServer/Restricted
+
+Clearing Microsoft-Windows-ApplicabilityEngine/Analytic
+
+Clearing Microsoft-Windows-ApplicabilityEngine/Operational
+
+Clearing Microsoft-Windows-Application Server-Applications/Admin
+
+Clearing Microsoft-Windows-Application Server-Applications/Analytic
+
+Clearing Microsoft-Windows-Application Server-Applications/Debug
+
+Clearing Microsoft-Windows-Application Server-Applications/Operational
+
+Clearing Microsoft-Windows-Application-Experience/Compatibility-Infrastructure-Debug
+
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant
+
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Analytic
+
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Trace
+
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Troubleshooter
+
+Clearing Microsoft-Windows-Application-Experience/Program-Inventory
+
+Clearing Microsoft-Windows-Application-Experience/Program-Telemetry
+
+Clearing Microsoft-Windows-Application-Experience/Steps-Recorder
+
+Clearing Microsoft-Windows-AppxPackaging/Debug
+
+Clearing Microsoft-Windows-AppxPackaging/Operational
+
+Clearing Microsoft-Windows-AppxPackaging/Performance
+
+Clearing Microsoft-Windows-AssignedAccess/Admin
+
+Clearing Microsoft-Windows-AssignedAccess/Operational
+
+Clearing Microsoft-Windows-AssignedAccessBroker/Admin
+
+Clearing Microsoft-Windows-AssignedAccessBroker/Operational
+
+Clearing Microsoft-Windows-AsynchronousCausality/Causality
+
+Clearing Microsoft-Windows-Audio/CaptureMonitor
+
+Clearing Microsoft-Windows-Audio/GlitchDetection
+
+Clearing Microsoft-Windows-Audio/Informational
+
+Clearing Microsoft-Windows-Audio/Operational
+
+Clearing Microsoft-Windows-Audio/Performance
+
+Clearing Microsoft-Windows-Audio/PlaybackManager
+
+Clearing Microsoft-Windows-Audit/Analytic
+
+Clearing Microsoft-Windows-Authentication User Interface/Operational
+
+Clearing Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController
+
+Clearing Microsoft-Windows-Authentication/ProtectedUser-Client
+
+Clearing Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController
+
+Clearing Microsoft-Windows-Authentication/ProtectedUserSuccesses-DomainController
+
+Clearing Microsoft-Windows-AxInstallService/Log
+
+Clearing Microsoft-Windows-BTH-BTHPORT/HCI
+
+Clearing Microsoft-Windows-BTH-BTHPORT/L2CAP
+
+Clearing Microsoft-Windows-BTH-BTHUSB/Diagnostic
+
+Clearing Microsoft-Windows-BTH-BTHUSB/Performance
+
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Diagnostic
+
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Operational
+
+Clearing Microsoft-Windows-BackgroundTransfer-ContentPrefetcher/Operational
+
+Clearing Microsoft-Windows-Backup
+
+Clearing Microsoft-Windows-Base-Filtering-Engine-Connections/Operational
+
+Clearing Microsoft-Windows-Base-Filtering-Engine-Resource-Flows/Operational
+
+Clearing Microsoft-Windows-Battery/Diagnostic
+
+Clearing Microsoft-Windows-Biometrics/Analytic
+
+Clearing Microsoft-Windows-Biometrics/Operational
+
+Clearing Microsoft-Windows-BitLocker-DrivePreparationTool/Admin
+
+Clearing Microsoft-Windows-BitLocker-DrivePreparationTool/Operational
+
+Clearing Microsoft-Windows-BitLocker-Driver-Performance/Operational
+
+Clearing Microsoft-Windows-BitLocker/BitLocker Management
+
+Clearing Microsoft-Windows-BitLocker/BitLocker Operational
+
+Clearing Microsoft-Windows-BitLocker/Tracing
+
+Clearing Microsoft-Windows-Bits-Client/Analytic
+
+Clearing Microsoft-Windows-Bits-Client/Operational
+
+Clearing Microsoft-Windows-Bluetooth-BthLEPrepairing/Operational
+
+Clearing Microsoft-Windows-Bluetooth-Bthmini/Operational
+
+Clearing Microsoft-Windows-Bluetooth-MTPEnum/Operational
+
+Clearing Microsoft-Windows-Bluetooth-Policy/Operational
+
+Clearing Microsoft-Windows-BranchCache/Operational
+
+Clearing Microsoft-Windows-BranchCacheClientEventProvider/Diagnostic
+
+Clearing Microsoft-Windows-BranchCacheEventProvider/Diagnostic
+
+Clearing Microsoft-Windows-BranchCacheMonitoring/Analytic
+
+Clearing Microsoft-Windows-BranchCacheSMB/Analytic
+
+Clearing Microsoft-Windows-BranchCacheSMB/Operational
+
+Clearing Microsoft-Windows-CAPI2/Catalog Database Debug
+
+Clearing Microsoft-Windows-CAPI2/Operational
+
+Clearing Microsoft-Windows-CDROM/Operational
+
+Clearing Microsoft-Windows-COM/Analytic
+
+Clearing Microsoft-Windows-COM/ApartmentInitialize
+
+Clearing Microsoft-Windows-COM/ApartmentUninitialize
+
+Clearing Microsoft-Windows-COM/Call
+
+Clearing Microsoft-Windows-COM/CreateInstance
+
+Clearing Microsoft-Windows-COM/ExtensionCatalog
+
+Clearing Microsoft-Windows-COM/FreeUnusedLibrary
+
+Clearing Microsoft-Windows-COM/RundownInstrumentation
+
+Clearing Microsoft-Windows-COMRuntime/Activations
+
+Clearing Microsoft-Windows-COMRuntime/MessageProcessing
+
+Clearing Microsoft-Windows-COMRuntime/Tracing
+
+Clearing Microsoft-Windows-CertPoleEng/Operational
+
+Clearing Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational
+
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational
+
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-User/Operational
+
+Clearing Microsoft-Windows-Cleanmgr/Diagnostic
+
+Clearing Microsoft-Windows-ClearTypeTextTuner/Diagnostic
+
+Clearing Microsoft-Windows-CloudStore/Debug
+
+Clearing Microsoft-Windows-CloudStore/Operational
+
+Clearing Microsoft-Windows-CmiSetup/Analytic
+
+Clearing Microsoft-Windows-CodeIntegrity/Operational
+
+Clearing Microsoft-Windows-CodeIntegrity/Verbose
+
+Clearing Microsoft-Windows-ComDlg32/Analytic
+
+Clearing Microsoft-Windows-ComDlg32/Debug
+
+Clearing Microsoft-Windows-Compat-Appraiser/Analytic
+
+Clearing Microsoft-Windows-Compat-Appraiser/Operational
+
+Clearing Microsoft-Windows-Containers-BindFlt/Debug
+
+Clearing Microsoft-Windows-Containers-BindFlt/Operational
+
+Clearing Microsoft-Windows-Containers-Wcifs/Debug
+
+Clearing Microsoft-Windows-Containers-Wcifs/Operational
+
+Clearing Microsoft-Windows-Containers-Wcnfs/Debug
+
+Clearing Microsoft-Windows-Containers-Wcnfs/Operational
+
+Clearing Microsoft-Windows-CoreApplication/Diagnostic
+
+Clearing Microsoft-Windows-CoreApplication/Operational
+
+Clearing Microsoft-Windows-CoreApplication/Tracing
+
+Clearing Microsoft-Windows-CoreSystem-SmsRouter-Events/Debug
+
+Clearing Microsoft-Windows-CoreSystem-SmsRouter-Events/Operational
+
+Clearing Microsoft-Windows-CoreWindow/Analytic
+
+Clearing Microsoft-Windows-CoreWindow/Debug
+
+Clearing Microsoft-Windows-CorruptedFileRecovery-Client/Operational
+
+Clearing Microsoft-Windows-CorruptedFileRecovery-Server/Operational
+
+Clearing Microsoft-Windows-Crashdump/Operational
+
+Clearing Microsoft-Windows-CredUI/Diagnostic
+
+Clearing Microsoft-Windows-Crypto-BCRYPT/Analytic
+
+Clearing Microsoft-Windows-Crypto-CNG/Analytic
+
+Clearing Microsoft-Windows-Crypto-DPAPI/BackUpKeySvc
+
+Clearing Microsoft-Windows-Crypto-DPAPI/Debug
+
+Clearing Microsoft-Windows-Crypto-DPAPI/Operational
+
+Clearing Microsoft-Windows-Crypto-DSSEnh/Analytic
+
+Clearing Microsoft-Windows-Crypto-NCrypt/Operational
+
+Clearing Microsoft-Windows-Crypto-RNG/Analytic
+
+Clearing Microsoft-Windows-Crypto-RSAEnh/Analytic
+
+Clearing Microsoft-Windows-D3D10Level9/Analytic
+
+Clearing Microsoft-Windows-D3D10Level9/PerfTiming
+
+Clearing Microsoft-Windows-DAL-Provider/Analytic
+
+Clearing Microsoft-Windows-DAL-Provider/Operational
+
+Clearing Microsoft-Windows-DAMM/Diagnostic
+
+Clearing Microsoft-Windows-DCLocator/Debug
+
+Clearing Microsoft-Windows-DDisplay/Analytic
+
+Clearing Microsoft-Windows-DDisplay/Logging
+
+Clearing Microsoft-Windows-DLNA-Namespace/Analytic
+
+Clearing Microsoft-Windows-DNS-Client/Operational
+
+Clearing Microsoft-Windows-DSC/Admin
+
+Clearing Microsoft-Windows-DSC/Analytic
+
+Clearing Microsoft-Windows-DSC/Debug
+
+Clearing Microsoft-Windows-DSC/Operational
+
+Clearing Microsoft-Windows-DUI/Diagnostic
+
+Clearing Microsoft-Windows-DUSER/Diagnostic
+
+Clearing Microsoft-Windows-DXGI/Analytic
+
+Clearing Microsoft-Windows-DXGI/Logging
+
+Clearing Microsoft-Windows-DXP/Analytic
+
+Clearing Microsoft-Windows-Data-Pdf/Debug
+
+Clearing Microsoft-Windows-DataIntegrityScan/Admin
+
+Clearing Microsoft-Windows-DataIntegrityScan/CrashRecovery
+
+Clearing Microsoft-Windows-DateTimeControlPanel/Analytic
+
+Clearing Microsoft-Windows-DateTimeControlPanel/Debug
+
+Clearing Microsoft-Windows-DateTimeControlPanel/Operational
+
+Clearing Microsoft-Windows-Deduplication/Diagnostic
+
+Clearing Microsoft-Windows-Deduplication/Operational
+
+Clearing Microsoft-Windows-Deduplication/Performance
+
+Clearing Microsoft-Windows-Deduplication/Scrubbing
+
+Clearing Microsoft-Windows-Defrag-Core/Debug
+
+Clearing Microsoft-Windows-Deplorch/Analytic
+
+Clearing Microsoft-Windows-DesktopActivityModerator/Diagnostic
+
+Clearing Microsoft-Windows-DesktopWindowManager-Diag/Diagnostic
+
+Clearing Microsoft-Windows-DeviceAssociationService/Performance
+
+Clearing Microsoft-Windows-DeviceConfidence/Analytic
+
+Clearing Microsoft-Windows-DeviceGuard/Operational
+
+Clearing Microsoft-Windows-DeviceGuard/Verbose
+
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
+
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Debug
+
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Operational
+
+Clearing Microsoft-Windows-DeviceSetupManager/Admin
+
+Clearing Microsoft-Windows-DeviceSetupManager/Analytic
+
+Clearing Microsoft-Windows-DeviceSetupManager/Debug
+
+Clearing Microsoft-Windows-DeviceSetupManager/Operational
+
+Clearing Microsoft-Windows-DeviceSync/Analytic
+
+Clearing Microsoft-Windows-DeviceSync/Operational
+
+Clearing Microsoft-Windows-DeviceUpdateAgent/Operational
+
+Clearing Microsoft-Windows-DeviceUx/Informational
+
+Clearing Microsoft-Windows-DeviceUx/Performance
+
+Clearing Microsoft-Windows-Devices-Background/Operational
+
+Clearing Microsoft-Windows-Dhcp-Client/Admin
+
+Clearing Microsoft-Windows-Dhcp-Client/Operational
+
+Clearing Microsoft-Windows-Dhcpv6-Client/Admin
+
+Clearing Microsoft-Windows-Dhcpv6-Client/Operational
+
+Clearing Microsoft-Windows-DiagCpl/Debug
+
+Clearing Microsoft-Windows-Diagnosis-AdvancedTaskManager/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-DPS/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-DPS/Debug
+
+Clearing Microsoft-Windows-Diagnosis-DPS/Operational
+
+Clearing Microsoft-Windows-Diagnosis-MSDE/Debug
+
+Clearing Microsoft-Windows-Diagnosis-PCW/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-PCW/Debug
+
+Clearing Microsoft-Windows-Diagnosis-PCW/Operational
+
+Clearing Microsoft-Windows-Diagnosis-PLA/Debug
+
+Clearing Microsoft-Windows-Diagnosis-PLA/Operational
+
+Clearing Microsoft-Windows-Diagnosis-Perfhost/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-Scheduled/Operational
+
+Clearing Microsoft-Windows-Diagnosis-Scripted/Admin
+
+Clearing Microsoft-Windows-Diagnosis-Scripted/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-Scripted/Debug
+
+Clearing Microsoft-Windows-Diagnosis-Scripted/Operational
+
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Debug
+
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Operational
+
+Clearing Microsoft-Windows-Diagnosis-WDC/Analytic
+
+Clearing Microsoft-Windows-Diagnosis-WDI/Debug
+
+Clearing Microsoft-Windows-Diagnostics-Networking/Debug
+
+Clearing Microsoft-Windows-Diagnostics-Networking/Operational
+
+Clearing Microsoft-Windows-Diagnostics-PerfTrack-Counters/Diagnostic
+
+Clearing Microsoft-Windows-Diagnostics-PerfTrack/Diagnostic
+
+Clearing Microsoft-Windows-Diagnostics-Performance/Diagnostic
+
+Clearing Microsoft-Windows-Diagnostics-Performance/Diagnostic/Loopback
+
+Clearing Microsoft-Windows-Diagnostics-Performance/Operational
+
+Clearing Microsoft-Windows-Direct3D10/Analytic
+
+Clearing Microsoft-Windows-Direct3D10_1/Analytic
+
+Clearing Microsoft-Windows-Direct3D11/Analytic
+
+Clearing Microsoft-Windows-Direct3D11/Logging
+
+Clearing Microsoft-Windows-Direct3D11/PerfTiming
+
+Clearing Microsoft-Windows-Direct3D12/Analytic
+
+Clearing Microsoft-Windows-Direct3D12/Logging
+
+Clearing Microsoft-Windows-Direct3D12/PerfTiming
+
+Clearing Microsoft-Windows-Direct3D9/Analytic
+
+Clearing Microsoft-Windows-Direct3DShaderCache/Default
+
+Clearing Microsoft-Windows-DirectComposition/Diagnostic
+
+Clearing Microsoft-Windows-DirectManipulation/Diagnostic
+
+Clearing Microsoft-Windows-DirectShow-KernelSupport/Performance
+
+Clearing Microsoft-Windows-DirectSound/Debug
+
+Clearing Microsoft-Windows-Disk/Operational
+
+Clearing Microsoft-Windows-DiskDiagnostic/Operational
+
+Clearing Microsoft-Windows-DiskDiagnosticDataCollector/Operational
+
+Clearing Microsoft-Windows-DiskDiagnosticResolver/Operational
+
+Clearing Microsoft-Windows-Dism-Api/Analytic
+
+Clearing Microsoft-Windows-Dism-Api/ExternalAnalytic
+
+Clearing Microsoft-Windows-Dism-Api/InternalAnalytic
+
+Clearing Microsoft-Windows-Dism-Cli/Analytic
+
+Clearing Microsoft-Windows-DisplayColorCalibration/Debug
+
+Clearing Microsoft-Windows-DisplayColorCalibration/Operational
+
+Clearing Microsoft-Windows-DisplaySwitch/Diagnostic
+
+Clearing Microsoft-Windows-Documents/Performance
+
+Clearing Microsoft-Windows-Dot3MM/Diagnostic
+
+Clearing Microsoft-Windows-DriverFrameworks-UserMode/Operational
+
+Clearing Microsoft-Windows-DucUpdateAgent/Operational
+
+Clearing Microsoft-Windows-Dwm-API/Diagnostic
+
+Clearing Microsoft-Windows-Dwm-Core/Diagnostic
+
+Clearing Microsoft-Windows-Dwm-Dwm/Diagnostic
+
+Clearing Microsoft-Windows-Dwm-Redir/Diagnostic
+
+Clearing Microsoft-Windows-Dwm-Udwm/Diagnostic
+
+Clearing Microsoft-Windows-DxgKrnl-Admin
+
+Clearing Microsoft-Windows-DxgKrnl-Operational
+
+Clearing Microsoft-Windows-DxgKrnl/Contention
+
+Clearing Microsoft-Windows-DxgKrnl/Diagnostic
+
+Clearing Microsoft-Windows-DxgKrnl/Performance
+
+Clearing Microsoft-Windows-DxgKrnl/Power
+
+Clearing Microsoft-Windows-DxpTaskSyncProvider/Analytic
+
+Clearing Microsoft-Windows-EDP-Application-Learning/Admin
+
+Clearing Microsoft-Windows-EDP-Audit-Regular/Admin
+
+Clearing Microsoft-Windows-EDP-Audit-TCB/Admin
+
+Clearing Microsoft-Windows-EFS/Debug
+
+Clearing Microsoft-Windows-ESE/IODiagnose
+
+Clearing Microsoft-Windows-ESE/Operational
+
+Clearing Microsoft-Windows-EapHost/Analytic
+
+Clearing Microsoft-Windows-EapHost/Debug
+
+Clearing Microsoft-Windows-EapHost/Operational
+
+Clearing Microsoft-Windows-EapMethods-RasChap/Operational
+
+Clearing Microsoft-Windows-EapMethods-RasTls/Operational
+
+Clearing Microsoft-Windows-EapMethods-Sim/Operational
+
+Clearing Microsoft-Windows-EapMethods-Ttls/Operational
+
+Clearing Microsoft-Windows-EaseOfAccess/Diagnostic
+
+Clearing Microsoft-Windows-Energy-Estimation-Engine/EventLog
+
+Clearing Microsoft-Windows-Energy-Estimation-Engine/Trace
+
+Clearing Microsoft-Windows-EnhancedStorage-EhStorTcgDrv/Analytic
+
+Clearing Microsoft-Windows-EventCollector/Debug
+
+Clearing Microsoft-Windows-EventCollector/Operational
+
+Clearing Microsoft-Windows-EventLog-WMIProvider/Debug
+
+Clearing Microsoft-Windows-EventLog/Analytic
+
+Clearing Microsoft-Windows-EventLog/Debug
+
+Clearing Microsoft-Windows-FMS/Analytic
+
+Clearing Microsoft-Windows-FMS/Debug
+
+Clearing Microsoft-Windows-FMS/Operational
+
+Clearing Microsoft-Windows-FailoverClustering-Client/Diagnostic
+
+Clearing Microsoft-Windows-Fault-Tolerant-Heap/Operational
+
+Clearing Microsoft-Windows-FeatureConfiguration/Analytic
+
+Clearing Microsoft-Windows-FeatureConfiguration/Operational
+
+Clearing Microsoft-Windows-FileHistory-Catalog/Analytic
+
+Clearing Microsoft-Windows-FileHistory-Catalog/Debug
+
+Clearing Microsoft-Windows-FileHistory-ConfigManager/Analytic
+
+Clearing Microsoft-Windows-FileHistory-ConfigManager/Debug
+
+Clearing Microsoft-Windows-FileHistory-Core/Analytic
+
+Clearing Microsoft-Windows-FileHistory-Core/Debug
+
+Clearing Microsoft-Windows-FileHistory-Core/WHC
+
+Clearing Microsoft-Windows-FileHistory-Engine/Analytic
+
+Clearing Microsoft-Windows-FileHistory-Engine/BackupLog
+
+Clearing Microsoft-Windows-FileHistory-Engine/Debug
+
+Clearing Microsoft-Windows-FileHistory-EventListener/Analytic
+
+Clearing Microsoft-Windows-FileHistory-EventListener/Debug
+
+Clearing Microsoft-Windows-FileHistory-Service/Analytic
+
+Clearing Microsoft-Windows-FileHistory-Service/Debug
+
+Clearing Microsoft-Windows-FileHistory-UI-Events/Analytic
+
+Clearing Microsoft-Windows-FileHistory-UI-Events/Debug
+
+Clearing Microsoft-Windows-FileInfoMinifilter/Operational
+
+Clearing Microsoft-Windows-Firewall-CPL/Diagnostic
+
+Clearing Microsoft-Windows-Folder Redirection/Operational
+
+Clearing Microsoft-Windows-Forwarding/Debug
+
+Clearing Microsoft-Windows-Forwarding/Operational
+
+Clearing Microsoft-Windows-GPIO-ClassExtension/Analytic
+
+Clearing Microsoft-Windows-GenericRoaming/Admin
+
+Clearing Microsoft-Windows-GroupPolicy/Operational
+
+Clearing Microsoft-Windows-HAL/Debug
+
+Clearing Microsoft-Windows-HealthCenter/Debug
+
+Clearing Microsoft-Windows-HealthCenter/Performance
+
+Clearing Microsoft-Windows-HealthCenterCPL/Performance
+
+Clearing Microsoft-Windows-HelloForBusiness/Operational
+
+Clearing Microsoft-Windows-Help/Operational
+
+Clearing Microsoft-Windows-HomeGroup Control Panel Performance/Diagnostic
+
+Clearing Microsoft-Windows-HomeGroup Control Panel/Operational
+
+Clearing Microsoft-Windows-HomeGroup Listener Service/Operational
+
+Clearing Microsoft-Windows-HomeGroup Provider Service Performance/Diagnostic
+
+Clearing Microsoft-Windows-HomeGroup Provider Service/Operational
+
+Clearing Microsoft-Windows-HomeGroup-ListenerService
+
+Clearing Microsoft-Windows-HotspotAuth/Analytic
+
+Clearing Microsoft-Windows-HotspotAuth/Operational
+
+Clearing Microsoft-Windows-HttpService/Log
+
+Clearing Microsoft-Windows-HttpService/Trace
+
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Admin
+
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Analytic
+
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Debug
+
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Diagnose
+
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Operational
+
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Admin
+
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Analytic
+
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Operational
+
+Clearing Microsoft-Windows-Hyper-V-NETVSC/Diagnostic
+
+Clearing Microsoft-Windows-Hyper-V-VID-Admin
+
+Clearing Microsoft-Windows-Hyper-V-VID-Analytic
+
+Clearing Microsoft-Windows-IE-SmartScreen
+
+Clearing Microsoft-Windows-IKE/Operational
+
+Clearing Microsoft-Windows-IKEDBG/Debug
+
+Clearing Microsoft-Windows-IME-Broker/Analytic
+
+Clearing Microsoft-Windows-IME-CandidateUI/Analytic
+
+Clearing Microsoft-Windows-IME-CustomerFeedbackManager/Debug
+
+Clearing Microsoft-Windows-IME-CustomerFeedbackManagerUI/Analytic
+
+Clearing Microsoft-Windows-IME-JPAPI/Analytic
+
+Clearing Microsoft-Windows-IME-JPLMP/Analytic
+
+Clearing Microsoft-Windows-IME-JPPRED/Analytic
+
+Clearing Microsoft-Windows-IME-JPSetting/Analytic
+
+Clearing Microsoft-Windows-IME-JPTIP/Analytic
+
+Clearing Microsoft-Windows-IME-KRAPI/Analytic
+
+Clearing Microsoft-Windows-IME-KRTIP/Analytic
+
+Clearing Microsoft-Windows-IME-OEDCompiler/Analytic
+
+Clearing Microsoft-Windows-IME-TCCORE/Analytic
+
+Clearing Microsoft-Windows-IME-TCTIP/Analytic
+
+Clearing Microsoft-Windows-IME-TIP/Analytic
+
+Clearing Microsoft-Windows-IPNAT/Diagnostic
+
+Clearing Microsoft-Windows-IPSEC-SRV/Diagnostic
+
+Clearing Microsoft-Windows-IPxlatCfg/Debug
+
+Clearing Microsoft-Windows-IPxlatCfg/Operational
+
+Clearing Microsoft-Windows-IdCtrls/Analytic
+
+Clearing Microsoft-Windows-IdCtrls/Operational
+
+Clearing Microsoft-Windows-IndirectDisplays-ClassExtension-Events/Diagnostic
+
+Clearing Microsoft-Windows-Input-HIDCLASS-Analytic
+
+Clearing Microsoft-Windows-InputSwitch/Diagnostic
+
+Clearing Microsoft-Windows-International-RegionalOptionsControlPanel/Operational
+
+Clearing Microsoft-Windows-Iphlpsvc/Debug
+
+Clearing Microsoft-Windows-Iphlpsvc/Operational
+
+Clearing Microsoft-Windows-Iphlpsvc/Trace
+
+Clearing Microsoft-Windows-KdsSvc/Operational
+
+Clearing Microsoft-Windows-Kerberos/Operational
+
+Clearing Microsoft-Windows-Kernel-Acpi/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-AppCompat/General
+
+Clearing Microsoft-Windows-Kernel-AppCompat/Performance
+
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Analytic
+
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Debug
+
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Operational
+
+Clearing Microsoft-Windows-Kernel-Boot/Analytic
+
+Clearing Microsoft-Windows-Kernel-Boot/Operational
+
+Clearing Microsoft-Windows-Kernel-BootDiagnostics/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Disk/Analytic
+
+Clearing Microsoft-Windows-Kernel-EventTracing/Admin
+
+Clearing Microsoft-Windows-Kernel-EventTracing/Analytic
+
+Clearing Microsoft-Windows-Kernel-File/Analytic
+
+Clearing Microsoft-Windows-Kernel-IO/Operational
+
+Clearing Microsoft-Windows-Kernel-Interrupt-Steering/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-IoTrace/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-LiveDump/Analytic
+
+Clearing Microsoft-Windows-Kernel-LiveDump/Operational
+
+Clearing Microsoft-Windows-Kernel-Memory/Analytic
+
+Clearing Microsoft-Windows-Kernel-Network/Analytic
+
+Clearing Microsoft-Windows-Kernel-Pdc/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Pep/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-PnP/Boot Diagnostic
+
+Clearing Microsoft-Windows-Kernel-PnP/Configuration
+
+Clearing Microsoft-Windows-Kernel-PnP/Configuration Diagnostic
+
+Clearing Microsoft-Windows-Kernel-PnP/Device Enumeration Diagnostic
+
+Clearing Microsoft-Windows-Kernel-PnP/Driver Diagnostic
+
+Clearing Microsoft-Windows-Kernel-PnP/Driver Watchdog
+
+Clearing Microsoft-Windows-Kernel-Power/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Power/Thermal-Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Power/Thermal-Operational
+
+Clearing Microsoft-Windows-Kernel-Prefetch/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Process/Analytic
+
+Clearing Microsoft-Windows-Kernel-Processor-Power/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-Registry/Analytic
+
+Clearing Microsoft-Windows-Kernel-Registry/Performance
+
+Clearing Microsoft-Windows-Kernel-ShimEngine/Debug
+
+Clearing Microsoft-Windows-Kernel-ShimEngine/Diagnostic
+
+Clearing Microsoft-Windows-Kernel-ShimEngine/Operational
+
+Clearing Microsoft-Windows-Kernel-StoreMgr/Analytic
+
+Clearing Microsoft-Windows-Kernel-StoreMgr/Operational
+
+Clearing Microsoft-Windows-Kernel-WDI/Analytic
+
+Clearing Microsoft-Windows-Kernel-WDI/Debug
+
+Clearing Microsoft-Windows-Kernel-WDI/Operational
+
+Clearing Microsoft-Windows-Kernel-WHEA/Errors
+
+Clearing Microsoft-Windows-Kernel-WHEA/Operational
+
+Clearing Microsoft-Windows-Kernel-XDV/Analytic
+
+Clearing Microsoft-Windows-KeyboardFilter/Admin
+
+Clearing Microsoft-Windows-KeyboardFilter/Operational
+
+Clearing Microsoft-Windows-KeyboardFilter/Performance
+
+Clearing Microsoft-Windows-Known Folders API Service
+
+Clearing Microsoft-Windows-L2NA/Diagnostic
+
+Clearing Microsoft-Windows-LDAP-Client/Debug
+
+Clearing Microsoft-Windows-LSA/Diagnostic
+
+Clearing Microsoft-Windows-LSA/Operational
+
+Clearing Microsoft-Windows-LSA/Performance
+
+Clearing Microsoft-Windows-LUA-ConsentUI/Diagnostic
+
+Clearing Microsoft-Windows-LanguagePackSetup/Analytic
+
+Clearing Microsoft-Windows-LanguagePackSetup/Debug
+
+Clearing Microsoft-Windows-LanguagePackSetup/Operational
+
+Clearing Microsoft-Windows-LimitsManagement/Diagnostic
+
+Clearing Microsoft-Windows-LinkLayerDiscoveryProtocol/Diagnostic
+
+Clearing Microsoft-Windows-LinkLayerDiscoveryProtocol/Operational
+
+Clearing Microsoft-Windows-LiveId/Analytic
+wevtutil : Failed to clear log Microsoft-Windows-LiveId/Analytic.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...iveId/Analytic.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Access is denied.
+
+Clearing Microsoft-Windows-LiveId/Operational
+wevtutil : Failed to clear log Microsoft-Windows-LiveId/Operational.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...Id/Operational.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Access is denied.
+
+Clearing Microsoft-Windows-MPEG2-Video-Encoder-MFT_Analytic
+
+Clearing Microsoft-Windows-MPS-CLNT/Diagnostic
+
+Clearing Microsoft-Windows-MPS-DRV/Diagnostic
+
+Clearing Microsoft-Windows-MPS-SRV/Diagnostic
+
+Clearing Microsoft-Windows-MSFTEDIT/Diagnostic
+
+Clearing Microsoft-Windows-MSPaint/Admin
+
+Clearing Microsoft-Windows-MSPaint/Debug
+
+Clearing Microsoft-Windows-MSPaint/Diagnostic
+
+Clearing Microsoft-Windows-MUI/Admin
+
+Clearing Microsoft-Windows-MUI/Analytic
+
+Clearing Microsoft-Windows-MUI/Debug
+
+Clearing Microsoft-Windows-MUI/Operational
+
+Clearing Microsoft-Windows-Media-Streaming/DMC
+
+Clearing Microsoft-Windows-Media-Streaming/DMR
+
+Clearing Microsoft-Windows-Media-Streaming/MDE
+
+Clearing Microsoft-Windows-MediaFoundation-MFCaptureEngine/MFCaptureEngine
+
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/SinkWriter
+
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/SourceReader
+
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/Transform
+
+Clearing Microsoft-Windows-MediaFoundation-Performance/SARStreamResource
+
+Clearing Microsoft-Windows-MediaFoundation-PlayAPI/Analytic
+
+Clearing Microsoft-Windows-MemoryDiagnostics-Results/Debug
+
+Clearing Microsoft-Windows-Minstore/Analytic
+
+Clearing Microsoft-Windows-Minstore/Debug
+
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Api-Internal/Analytic
+
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Api/Analytic
+
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task/Analytic
+
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task/Operational
+
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-SmsApi/Analytic
+
+Clearing Microsoft-Windows-MobilityCenter/Performance
+
+Clearing Microsoft-Windows-ModernDeployment-Diagnostics-Provider/Admin
+
+Clearing Microsoft-Windows-ModernDeployment-Diagnostics-Provider/Autopilot
+
+Clearing Microsoft-Windows-ModernDeployment-Diagnostics-Provider/Debug
+
+Clearing Microsoft-Windows-ModernDeployment-Diagnostics-Provider/Diagnostics
+
+Clearing Microsoft-Windows-ModernDeployment-Diagnostics-Provider/ManagementService
+
+Clearing Microsoft-Windows-Mprddm/Operational
+
+Clearing Microsoft-Windows-NCSI/Analytic
+
+Clearing Microsoft-Windows-NCSI/Operational
+
+Clearing Microsoft-Windows-NDF-HelperClassDiscovery/Debug
+
+Clearing Microsoft-Windows-NDIS-PacketCapture/Diagnostic
+
+Clearing Microsoft-Windows-NDIS/Diagnostic
+
+Clearing Microsoft-Windows-NDIS/Operational
+
+Clearing Microsoft-Windows-NTLM/Operational
+
+Clearing Microsoft-Windows-NWiFi/Diagnostic
+
+Clearing Microsoft-Windows-Narrator/Diagnostic
+
+Clearing Microsoft-Windows-Ncasvc/Operational
+
+Clearing Microsoft-Windows-NcdAutoSetup/Diagnostic
+
+Clearing Microsoft-Windows-NcdAutoSetup/Operational
+
+Clearing Microsoft-Windows-NdisImPlatform/Operational
+
+Clearing Microsoft-Windows-Ndu/Diagnostic
+
+Clearing Microsoft-Windows-NetShell/Performance
+
+Clearing Microsoft-Windows-Network-Connection-Broker
+
+Clearing Microsoft-Windows-Network-DataUsage/Analytic
+
+Clearing Microsoft-Windows-Network-Setup/Diagnostic
+
+Clearing Microsoft-Windows-Network-and-Sharing-Center/Diagnostic
+
+Clearing Microsoft-Windows-NetworkBridge/Diagnostic
+
+Clearing Microsoft-Windows-NetworkLocationWizard/Operational
+
+Clearing Microsoft-Windows-NetworkProfile/Diagnostic
+
+Clearing Microsoft-Windows-NetworkProfile/Operational
+
+Clearing Microsoft-Windows-NetworkProvider/Operational
+
+Clearing Microsoft-Windows-NetworkProvisioning/Analytic
+
+Clearing Microsoft-Windows-NetworkProvisioning/Operational
+
+Clearing Microsoft-Windows-NetworkSecurity/Debug
+
+Clearing Microsoft-Windows-NetworkStatus/Analytic
+
+Clearing Microsoft-Windows-Networking-Correlation/Diagnostic
+
+Clearing Microsoft-Windows-Networking-RealTimeCommunication/Tracing
+
+Clearing Microsoft-Windows-NlaSvc/Diagnostic
+
+Clearing Microsoft-Windows-NlaSvc/Operational
+
+Clearing Microsoft-Windows-Ntfs/Operational
+
+Clearing Microsoft-Windows-Ntfs/Performance
+
+Clearing Microsoft-Windows-Ntfs/WHC
+
+Clearing Microsoft-Windows-OLE/Clipboard-Performance
+
+Clearing Microsoft-Windows-OLEACC/Debug
+
+Clearing Microsoft-Windows-OLEACC/Diagnostic
+
+Clearing Microsoft-Windows-OOBE-FirstLogonAnim/Diagnostic
+
+Clearing Microsoft-Windows-OOBE-Machine-Core/Diagnostic
+
+Clearing Microsoft-Windows-OOBE-Machine-DUI/Diagnostic
+
+Clearing Microsoft-Windows-OOBE-Machine-DUI/Operational
+
+Clearing Microsoft-Windows-OOBE-Machine-Plugins-Wireless/Diagnostic
+
+Clearing Microsoft-Windows-OcpUpdateAgent/Operational
+
+Clearing Microsoft-Windows-OfflineFiles/Analytic
+
+Clearing Microsoft-Windows-OfflineFiles/Debug
+
+Clearing Microsoft-Windows-OfflineFiles/Operational
+
+Clearing Microsoft-Windows-OfflineFiles/SyncLog
+
+Clearing Microsoft-Windows-OneBackup/Debug
+
+Clearing Microsoft-Windows-OneX/Diagnostic
+
+Clearing Microsoft-Windows-OneX/Operational
+
+Clearing Microsoft-Windows-OobeLdr/Analytic
+
+Clearing Microsoft-Windows-OtpCredentialProvider/Operational
+
+Clearing Microsoft-Windows-PCI/Diagnostic
+
+Clearing Microsoft-Windows-PackageStateRoaming/Analytic
+
+Clearing Microsoft-Windows-PackageStateRoaming/Debug
+
+Clearing Microsoft-Windows-PackageStateRoaming/Operational
+
+Clearing Microsoft-Windows-ParentalControls/Operational
+
+Clearing Microsoft-Windows-Partition/Analytic
+
+Clearing Microsoft-Windows-Partition/Diagnostic
+
+Clearing Microsoft-Windows-PeerToPeerDrtEventProvider/Diagnostic
+
+Clearing Microsoft-Windows-PerceptionRuntime/Operational
+
+Clearing Microsoft-Windows-PerceptionSensorDataService/Operational
+
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Analytic
+
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Diagnostic
+
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Operational
+
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Analytic
+
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Diagnostic
+
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Operational
+
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Analytic
+
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Certification
+
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Diagnose
+
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Operational
+
+Clearing Microsoft-Windows-PhotoAcq/Analytic
+
+Clearing Microsoft-Windows-PlayToManager/Analytic
+
+Clearing Microsoft-Windows-Policy/Analytic
+
+Clearing Microsoft-Windows-Policy/Operational
+
+Clearing Microsoft-Windows-PortableDeviceStatusProvider/Analytic
+
+Clearing Microsoft-Windows-PortableDeviceSyncProvider/Analytic
+
+Clearing Microsoft-Windows-Power-Meter-Polling/Diagnostic
+
+Clearing Microsoft-Windows-PowerCfg/Diagnostic
+
+Clearing Microsoft-Windows-PowerCpl/Diagnostic
+
+Clearing Microsoft-Windows-PowerEfficiencyDiagnostics/Diagnostic
+
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Analytic
+
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Debug
+
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Operational
+
+Clearing Microsoft-Windows-PowerShell/Admin
+
+Clearing Microsoft-Windows-PowerShell/Analytic
+
+Clearing Microsoft-Windows-PowerShell/Debug
+
+Clearing Microsoft-Windows-PowerShell/Operational
+
+Clearing Microsoft-Windows-PrimaryNetworkIcon/Performance
+
+Clearing Microsoft-Windows-PrintBRM/Admin
+
+Clearing Microsoft-Windows-PrintService-USBMon/Debug
+
+Clearing Microsoft-Windows-PrintService/Admin
+
+Clearing Microsoft-Windows-PrintService/Debug
+
+Clearing Microsoft-Windows-PrintService/Operational
+
+Clearing Microsoft-Windows-Privacy-Auditing/Operational
+
+Clearing Microsoft-Windows-ProcessStateManager/Diagnostic
+
+Clearing Microsoft-Windows-Program-Compatibility-Assistant/Analytic
+
+Clearing Microsoft-Windows-Program-Compatibility-Assistant/CompatAfterUpgrade
+
+Clearing Microsoft-Windows-Provisioning-Diagnostics-Provider/Admin
+
+Clearing Microsoft-Windows-Provisioning-Diagnostics-Provider/AutoPilot
+
+Clearing Microsoft-Windows-Provisioning-Diagnostics-Provider/Debug
+
+Clearing Microsoft-Windows-Provisioning-Diagnostics-Provider/ManagementService
+
+Clearing Microsoft-Windows-Proximity-Common/Diagnostic
+
+Clearing Microsoft-Windows-Proximity-Common/Informational
+
+Clearing Microsoft-Windows-Proximity-Common/Performance
+
+Clearing Microsoft-Windows-PushNotification-Developer/Debug
+
+Clearing Microsoft-Windows-PushNotification-InProc/Debug
+
+Clearing Microsoft-Windows-PushNotification-Platform/Admin
+
+Clearing Microsoft-Windows-PushNotification-Platform/Debug
+
+Clearing Microsoft-Windows-PushNotification-Platform/Operational
+
+Clearing Microsoft-Windows-QoS-Pacer/Diagnostic
+
+Clearing Microsoft-Windows-QoS-qWAVE/Debug
+
+Clearing Microsoft-Windows-RPC-Proxy/Debug
+
+Clearing Microsoft-Windows-RPC/Debug
+
+Clearing Microsoft-Windows-RPC/EEInfo
+
+Clearing Microsoft-Windows-RRAS/Debug
+
+Clearing Microsoft-Windows-RRAS/Operational
+
+Clearing Microsoft-Windows-RadioManager/Analytic
+
+Clearing Microsoft-Windows-Ras-NdisWanPacketCapture/Diagnostic
+
+Clearing Microsoft-Windows-RasAgileVpn/Debug
+
+Clearing Microsoft-Windows-RasAgileVpn/Operational
+
+Clearing Microsoft-Windows-ReFS/Operational
+
+Clearing Microsoft-Windows-ReadyBoost/Analytic
+
+Clearing Microsoft-Windows-ReadyBoost/Operational
+
+Clearing Microsoft-Windows-ReadyBoostDriver/Analytic
+
+Clearing Microsoft-Windows-ReadyBoostDriver/Operational
+
+Clearing Microsoft-Windows-Regsvr32/Operational
+
+Clearing Microsoft-Windows-RemoteApp and Desktop Connections/Admin
+
+Clearing Microsoft-Windows-RemoteApp and Desktop Connections/Operational
+
+Clearing Microsoft-Windows-RemoteAssistance/Admin
+
+Clearing Microsoft-Windows-RemoteAssistance/Operational
+
+Clearing Microsoft-Windows-RemoteAssistance/Tracing
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Admin
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Debug
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-Synth3dvsc/Admin
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-VM-Kernel-Mode-Transport/Debug
+
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-VM-User-Mode-Transport/Debug
+
+Clearing Microsoft-Windows-RemoteDesktopServices-SessionServices/Operational
+
+Clearing Microsoft-Windows-Remotefs-Rdbss/Diagnostic
+
+Clearing Microsoft-Windows-Remotefs-Rdbss/Operational
+
+Clearing Microsoft-Windows-ResetEng-Trace/Diagnostic
+
+Clearing Microsoft-Windows-Resource-Exhaustion-Detector/Operational
+
+Clearing Microsoft-Windows-Resource-Exhaustion-Resolver/Operational
+
+Clearing Microsoft-Windows-ResourcePublication/Tracing
+
+Clearing Microsoft-Windows-RestartManager/Operational
+
+Clearing Microsoft-Windows-RetailDemo/Admin
+
+Clearing Microsoft-Windows-RetailDemo/Operational
+
+Clearing Microsoft-Windows-Runtime-Graphics/Analytic
+
+Clearing Microsoft-Windows-Runtime-Networking-BackgroundTransfer/Tracing
+
+Clearing Microsoft-Windows-Runtime-Networking/Tracing
+
+Clearing Microsoft-Windows-Runtime-Web-Http/Tracing
+
+Clearing Microsoft-Windows-Runtime-WebAPI/Tracing
+
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTAdaptiveMediaSource
+
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTCaptureEngine
+
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTMediaStreamSource
+
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTTranscode
+
+Clearing Microsoft-Windows-Runtime/CreateInstance
+
+Clearing Microsoft-Windows-Runtime/Error
+
+Clearing Microsoft-Windows-SENSE/Operational
+
+Clearing Microsoft-Windows-SMBClient/Analytic
+
+Clearing Microsoft-Windows-SMBClient/HelperClassDiagnostic
+
+Clearing Microsoft-Windows-SMBClient/ObjectStateDiagnostic
+
+Clearing Microsoft-Windows-SMBClient/Operational
+
+Clearing Microsoft-Windows-SMBDirect/Admin
+
+Clearing Microsoft-Windows-SMBDirect/Debug
+
+Clearing Microsoft-Windows-SMBDirect/Netmon
+
+Clearing Microsoft-Windows-SMBServer/Analytic
+
+Clearing Microsoft-Windows-SMBServer/Audit
+
+Clearing Microsoft-Windows-SMBServer/Connectivity
+
+Clearing Microsoft-Windows-SMBServer/Diagnostic
+
+Clearing Microsoft-Windows-SMBServer/Operational
+
+Clearing Microsoft-Windows-SMBServer/Performance
+
+Clearing Microsoft-Windows-SMBServer/Security
+
+Clearing Microsoft-Windows-SMBWitnessClient/Admin
+
+Clearing Microsoft-Windows-SMBWitnessClient/Informational
+
+Clearing Microsoft-Windows-SPB-ClassExtension/Analytic
+
+Clearing Microsoft-Windows-SPB-HIDI2C/Analytic
+
+Clearing Microsoft-Windows-Schannel-Events/Perf
+
+Clearing Microsoft-Windows-Sdbus/Analytic
+
+Clearing Microsoft-Windows-Sdbus/Debug
+
+Clearing Microsoft-Windows-Sdstor/Analytic
+
+Clearing Microsoft-Windows-Search-Core/Diagnostic
+
+Clearing Microsoft-Windows-Search-ProtocolHandlers/Diagnostic
+
+Clearing Microsoft-Windows-SearchUI/Diagnostic
+
+Clearing Microsoft-Windows-SearchUI/Operational
+
+Clearing Microsoft-Windows-SecureAssessment/Operational
+
+Clearing Microsoft-Windows-Security-Adminless/Operational
+
+Clearing Microsoft-Windows-Security-Audit-Configuration-Client/Diagnostic
+
+Clearing Microsoft-Windows-Security-Audit-Configuration-Client/Operational
+
+Clearing Microsoft-Windows-Security-EnterpriseData-FileRevocationManager/Operational
+
+Clearing Microsoft-Windows-Security-ExchangeActiveSyncProvisioning/Operational
+
+Clearing Microsoft-Windows-Security-ExchangeActiveSyncProvisioning/Performance
+
+Clearing Microsoft-Windows-Security-IdentityListener/Operational
+
+Clearing Microsoft-Windows-Security-IdentityStore/Performance
+
+Clearing Microsoft-Windows-Security-LessPrivilegedAppContainer/Operational
+
+Clearing Microsoft-Windows-Security-Mitigations/KernelMode
+
+Clearing Microsoft-Windows-Security-Mitigations/UserMode
+
+Clearing Microsoft-Windows-Security-Netlogon/Operational
+
+Clearing Microsoft-Windows-Security-SPP-UX-GC/Analytic
+
+Clearing Microsoft-Windows-Security-SPP-UX-GenuineCenter-Logging/Operational
+
+Clearing Microsoft-Windows-Security-SPP-UX-Notifications/ActionCenter
+
+Clearing Microsoft-Windows-Security-SPP-UX/Analytic
+
+Clearing Microsoft-Windows-Security-SPP/Perf
+
+Clearing Microsoft-Windows-Security-UserConsentVerifier/Audit
+
+Clearing Microsoft-Windows-Security-Vault/Performance
+
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Admin
+
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Operational
+
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Perf
+
+Clearing Microsoft-Windows-SendTo/Diagnostic
+
+Clearing Microsoft-Windows-Sens/Debug
+
+Clearing Microsoft-Windows-SenseIR/Operational
+
+Clearing Microsoft-Windows-Sensors/Debug
+
+Clearing Microsoft-Windows-Sensors/Performance
+
+Clearing Microsoft-Windows-Serial-ClassExtension-V2/Analytic
+
+Clearing Microsoft-Windows-Serial-ClassExtension/Analytic
+
+Clearing Microsoft-Windows-ServiceReportingApi/Debug
+
+Clearing Microsoft-Windows-Services-Svchost/Diagnostic
+
+Clearing Microsoft-Windows-Services/Diagnostic
+
+Clearing Microsoft-Windows-Servicing/Debug
+
+Clearing Microsoft-Windows-SettingSync-Azure/Debug
+
+Clearing Microsoft-Windows-SettingSync-Azure/Operational
+
+Clearing Microsoft-Windows-SettingSync-OneDrive/Analytic
+
+Clearing Microsoft-Windows-SettingSync-OneDrive/Debug
+
+Clearing Microsoft-Windows-SettingSync-OneDrive/Operational
+
+Clearing Microsoft-Windows-SettingSync/Analytic
+
+Clearing Microsoft-Windows-SettingSync/Debug
+
+Clearing Microsoft-Windows-SettingSync/Operational
+
+Clearing Microsoft-Windows-SettingSync/VerboseDebug
+
+Clearing Microsoft-Windows-Setup/Analytic
+
+Clearing Microsoft-Windows-SetupCl/Analytic
+
+Clearing Microsoft-Windows-SetupPlatform/Analytic
+
+Clearing Microsoft-Windows-SetupQueue/Analytic
+
+Clearing Microsoft-Windows-SetupUGC/Analytic
+
+Clearing Microsoft-Windows-ShareMedia-ControlPanel/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AppWizCpl/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-BootAnim/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-Common/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-CredUI/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-CredentialProviderUser/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-Logon/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-LogonUI/Diagnostic
+
+Clearing Microsoft-Windows-Shell-AuthUI-Shutdown/Diagnostic
+
+Clearing Microsoft-Windows-Shell-ConnectedAccountState/ActionCenter
+
+Clearing Microsoft-Windows-Shell-Core/ActionCenter
+
+Clearing Microsoft-Windows-Shell-Core/AppDefaults
+
+Clearing Microsoft-Windows-Shell-Core/Diagnostic
+
+Clearing Microsoft-Windows-Shell-Core/LogonTasksChannel
+
+Clearing Microsoft-Windows-Shell-Core/Operational
+
+Clearing Microsoft-Windows-Shell-DefaultPrograms/Diagnostic
+
+Clearing Microsoft-Windows-Shell-LockScreenContent/Diagnostic
+
+Clearing Microsoft-Windows-Shell-OpenWith/Diagnostic
+
+Clearing Microsoft-Windows-Shell-Shwebsvc
+
+Clearing Microsoft-Windows-Shell-ZipFolder/Diagnostic
+
+Clearing Microsoft-Windows-ShellCommon-StartLayoutPopulation/Diagnostic
+
+Clearing Microsoft-Windows-ShellCommon-StartLayoutPopulation/Operational
+
+Clearing Microsoft-Windows-Shsvcs/Diagnostic
+
+Clearing Microsoft-Windows-SleepStudy/Diagnostic
+
+Clearing Microsoft-Windows-SmartCard-Audit/Authentication
+
+Clearing Microsoft-Windows-SmartCard-DeviceEnum/Operational
+
+Clearing Microsoft-Windows-SmartCard-TPM-VCard-Module/Admin
+
+Clearing Microsoft-Windows-SmartCard-TPM-VCard-Module/Operational
+
+Clearing Microsoft-Windows-SmartScreen/Debug
+
+Clearing Microsoft-Windows-SmbClient/Audit
+
+Clearing Microsoft-Windows-SmbClient/Connectivity
+
+Clearing Microsoft-Windows-SmbClient/Diagnostic
+
+Clearing Microsoft-Windows-SmbClient/Security
+
+Clearing Microsoft-Windows-Speech-UserExperience/Diagnostic
+
+Clearing Microsoft-Windows-Spell-Checking/Analytic
+
+Clearing Microsoft-Windows-SpellChecker/Analytic
+
+Clearing Microsoft-Windows-Spellchecking-Host/Analytic
+
+Clearing Microsoft-Windows-SruMon/Diagnostic
+
+Clearing Microsoft-Windows-SrumTelemetry
+
+Clearing Microsoft-Windows-StateRepository/Debug
+
+Clearing Microsoft-Windows-StateRepository/Diagnostic
+
+Clearing Microsoft-Windows-StateRepository/Operational
+
+Clearing Microsoft-Windows-StateRepository/Restricted
+
+Clearing Microsoft-Windows-StorDiag/Operational
+
+Clearing Microsoft-Windows-StorPort/Operational
+
+Clearing Microsoft-Windows-Storage-ATAPort/Admin
+
+Clearing Microsoft-Windows-Storage-ATAPort/Analytic
+
+Clearing Microsoft-Windows-Storage-ATAPort/Debug
+
+Clearing Microsoft-Windows-Storage-ATAPort/Diagnose
+
+Clearing Microsoft-Windows-Storage-ATAPort/Operational
+
+Clearing Microsoft-Windows-Storage-ClassPnP/Admin
+
+Clearing Microsoft-Windows-Storage-ClassPnP/Analytic
+
+Clearing Microsoft-Windows-Storage-ClassPnP/Debug
+
+Clearing Microsoft-Windows-Storage-ClassPnP/Diagnose
+
+Clearing Microsoft-Windows-Storage-ClassPnP/Operational
+
+Clearing Microsoft-Windows-Storage-Disk/Admin
+
+Clearing Microsoft-Windows-Storage-Disk/Analytic
+
+Clearing Microsoft-Windows-Storage-Disk/Debug
+
+Clearing Microsoft-Windows-Storage-Disk/Diagnose
+
+Clearing Microsoft-Windows-Storage-Disk/Operational
+
+Clearing Microsoft-Windows-Storage-Storport/Admin
+
+Clearing Microsoft-Windows-Storage-Storport/Analytic
+
+Clearing Microsoft-Windows-Storage-Storport/Debug
+
+Clearing Microsoft-Windows-Storage-Storport/Diagnose
+
+Clearing Microsoft-Windows-Storage-Storport/Health
+
+Clearing Microsoft-Windows-Storage-Storport/Operational
+
+Clearing Microsoft-Windows-Storage-Tiering-IoHeat/Heat
+
+Clearing Microsoft-Windows-Storage-Tiering/Admin
+
+Clearing Microsoft-Windows-StorageManagement/Debug
+
+Clearing Microsoft-Windows-StorageManagement/Operational
+
+Clearing Microsoft-Windows-StorageSettings/Diagnostic
+
+Clearing Microsoft-Windows-StorageSpaces-Driver/Diagnostic
+
+Clearing Microsoft-Windows-StorageSpaces-Driver/Operational
+
+Clearing Microsoft-Windows-StorageSpaces-Driver/Performance
+
+Clearing Microsoft-Windows-StorageSpaces-ManagementAgent/WHC
+
+Clearing Microsoft-Windows-StorageSpaces-SpaceManager/Diagnostic
+
+Clearing Microsoft-Windows-StorageSpaces-SpaceManager/Operational
+
+Clearing Microsoft-Windows-Store/Operational
+
+Clearing Microsoft-Windows-Storsvc/Diagnostic
+
+Clearing Microsoft-Windows-Subsys-Csr/Operational
+
+Clearing Microsoft-Windows-Subsys-SMSS/Operational
+
+Clearing Microsoft-Windows-Superfetch/Main
+
+Clearing Microsoft-Windows-Superfetch/PfApLog
+
+Clearing Microsoft-Windows-Superfetch/StoreLog
+
+Clearing Microsoft-Windows-Sysprep/Analytic
+
+Clearing Microsoft-Windows-System-Profile-HardwareId/Diagnostic
+
+Clearing Microsoft-Windows-SystemSettingsHandlers/Debug
+
+Clearing Microsoft-Windows-SystemSettingsThreshold/Debug
+
+Clearing Microsoft-Windows-SystemSettingsThreshold/Diagnostic
+
+Clearing Microsoft-Windows-SystemSettingsThreshold/Operational
+
+Clearing Microsoft-Windows-TCPIP/Diagnostic
+
+Clearing Microsoft-Windows-TCPIP/Operational
+
+Clearing Microsoft-Windows-TSF-msctf/Debug
+
+Clearing Microsoft-Windows-TSF-msctf/Diagnostic
+
+Clearing Microsoft-Windows-TSF-msutb/Debug
+
+Clearing Microsoft-Windows-TSF-msutb/Diagnostic
+
+Clearing Microsoft-Windows-TTS/Diagnostic
+
+Clearing Microsoft-Windows-TWinAPI/Diagnostic
+
+Clearing Microsoft-Windows-TWinUI/Diagnostic
+
+Clearing Microsoft-Windows-TWinUI/Operational
+
+Clearing Microsoft-Windows-TZSync/Analytic
+
+Clearing Microsoft-Windows-TZSync/Operational
+
+Clearing Microsoft-Windows-TZUtil/Operational
+
+Clearing Microsoft-Windows-TaskScheduler/Debug
+
+Clearing Microsoft-Windows-TaskScheduler/Diagnostic
+
+Clearing Microsoft-Windows-TaskScheduler/Maintenance
+
+Clearing Microsoft-Windows-TaskScheduler/Operational
+
+Clearing Microsoft-Windows-TaskbarCPL/Diagnostic
+
+Clearing Microsoft-Windows-TenantRestrictions/Operational
+
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Admin
+
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Debug
+
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Operational
+
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Admin
+
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Debug
+
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
+
+Clearing Microsoft-Windows-TerminalServices-MediaRedirection/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Admin
+
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Debug
+
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Operational
+
+Clearing Microsoft-Windows-TerminalServices-Printers/Admin
+
+Clearing Microsoft-Windows-TerminalServices-Printers/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-Printers/Debug
+
+Clearing Microsoft-Windows-TerminalServices-Printers/Operational
+
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Debug
+
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Operational
+
+Clearing Microsoft-Windows-TerminalServices-RdpSoundDriver/Capture
+
+Clearing Microsoft-Windows-TerminalServices-RdpSoundDriver/Playback
+
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin
+
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Debug
+
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational
+
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Admin
+
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Debug
+
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Operational
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Admin
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Debug
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Operational
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Admin
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Debug
+
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Operational
+
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Admin
+
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Analytic
+
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Debug
+
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Operational
+
+Clearing Microsoft-Windows-Tethering-Manager/Analytic
+
+Clearing Microsoft-Windows-Tethering-Station/Analytic
+
+Clearing Microsoft-Windows-ThemeCPL/Diagnostic
+
+Clearing Microsoft-Windows-ThemeUI/Diagnostic
+
+Clearing Microsoft-Windows-Threat-Intelligence/Analytic
+
+Clearing Microsoft-Windows-Time-Service-PTP-Provider/PTP-Operational
+
+Clearing Microsoft-Windows-Time-Service/Operational
+
+Clearing Microsoft-Windows-Troubleshooting-Recommended/Admin
+
+Clearing Microsoft-Windows-Troubleshooting-Recommended/Operational
+
+Clearing Microsoft-Windows-TunnelDriver
+
+Clearing Microsoft-Windows-UAC-FileVirtualization/Operational
+
+Clearing Microsoft-Windows-UAC/Operational
+
+Clearing Microsoft-Windows-UI-Shell/Diagnostic
+
+Clearing Microsoft-Windows-UIAnimation/Diagnostic
+
+Clearing Microsoft-Windows-UIAutomationCore/Debug
+
+Clearing Microsoft-Windows-UIAutomationCore/Diagnostic
+
+Clearing Microsoft-Windows-UIAutomationCore/Perf
+
+Clearing Microsoft-Windows-UIRibbon/Diagnostic
+
+Clearing Microsoft-Windows-USB-MAUSBHOST-Analytic
+
+Clearing Microsoft-Windows-USB-UCX-Analytic
+
+Clearing Microsoft-Windows-USB-USBHUB/Diagnostic
+
+Clearing Microsoft-Windows-USB-USBHUB3-Analytic
+
+Clearing Microsoft-Windows-USB-USBPORT/Diagnostic
+
+Clearing Microsoft-Windows-USB-USBXHCI-Analytic
+
+Clearing Microsoft-Windows-USB-USBXHCI-Trustlet-Analytic
+
+Clearing Microsoft-Windows-UniversalTelemetryClient/Operational
+
+Clearing Microsoft-Windows-User Control Panel Performance/Diagnostic
+
+Clearing Microsoft-Windows-User Control Panel Usage/Diagnostic
+
+Clearing Microsoft-Windows-User Control Panel/Diagnostic
+
+Clearing Microsoft-Windows-User Control Panel/Operational
+
+Clearing Microsoft-Windows-User Device Registration/Admin
+
+Clearing Microsoft-Windows-User Device Registration/Debug
+
+Clearing Microsoft-Windows-User Profile Service/Diagnostic
+
+Clearing Microsoft-Windows-User Profile Service/Operational
+
+Clearing Microsoft-Windows-User-Loader/Analytic
+
+Clearing Microsoft-Windows-User-Loader/Operational
+
+Clearing Microsoft-Windows-UserAccountControl/Diagnostic
+
+Clearing Microsoft-Windows-UserModePowerService/Diagnostic
+
+Clearing Microsoft-Windows-UserPnp/ActionCenter
+
+Clearing Microsoft-Windows-UserPnp/DeviceInstall
+
+Clearing Microsoft-Windows-UserPnp/DeviceMetadata/Debug
+
+Clearing Microsoft-Windows-UserPnp/Performance
+
+Clearing Microsoft-Windows-UserPnp/SchedulerOperations
+
+Clearing Microsoft-Windows-UxInit/Diagnostic
+
+Clearing Microsoft-Windows-UxTheme/Diagnostic
+
+Clearing Microsoft-Windows-VAN/Diagnostic
+
+Clearing Microsoft-Windows-VDRVROOT/Operational
+
+Clearing Microsoft-Windows-VHDMP-Analytic
+
+Clearing Microsoft-Windows-VHDMP-Operational
+
+Clearing Microsoft-Windows-VIRTDISK-Analytic
+
+Clearing Microsoft-Windows-VPN-Client/Operational
+
+Clearing Microsoft-Windows-VPN/Operational
+
+Clearing Microsoft-Windows-VWiFi/Diagnostic
+
+Clearing Microsoft-Windows-VerifyHardwareSecurity/Admin
+
+Clearing Microsoft-Windows-VerifyHardwareSecurity/Operational
+
+Clearing Microsoft-Windows-Volume/Diagnostic
+
+Clearing Microsoft-Windows-VolumeControl/Performance
+
+Clearing Microsoft-Windows-VolumeSnapshot-Driver/Analytic
+
+Clearing Microsoft-Windows-VolumeSnapshot-Driver/Operational
+
+Clearing Microsoft-Windows-WABSyncProvider/Analytic
+
+Clearing Microsoft-Windows-WCN-Config-Registrar/Diagnostic
+
+Clearing Microsoft-Windows-WCNWiz/Analytic
+
+Clearing Microsoft-Windows-WDAG-PolicyEvaluator-CSP/Operational
+
+Clearing Microsoft-Windows-WDAG-PolicyEvaluator-GP/Operational
+
+Clearing Microsoft-Windows-WEPHOSTSVC/Operational
+
+Clearing Microsoft-Windows-WER-PayloadHealth/Operational
+
+Clearing Microsoft-Windows-WFP/Analytic
+
+Clearing Microsoft-Windows-WFP/Operational
+
+Clearing Microsoft-Windows-WLAN-AutoConfig/Operational
+
+Clearing Microsoft-Windows-WLAN-Autoconfig/Diagnostic
+
+Clearing Microsoft-Windows-WLAN-Driver/Analytic
+
+Clearing Microsoft-Windows-WLAN-MediaManager/Diagnostic
+
+Clearing Microsoft-Windows-WLANConnectionFlow/Diagnostic
+
+Clearing Microsoft-Windows-WMI-Activity/Debug
+
+Clearing Microsoft-Windows-WMI-Activity/Operational
+
+Clearing Microsoft-Windows-WMI-Activity/Trace
+
+Clearing Microsoft-Windows-WMPDMCUI/Diagnostic
+
+Clearing Microsoft-Windows-WMPNSS-PublicAPI/Diagnostic
+
+Clearing Microsoft-Windows-WMPNSS-Service/Diagnostic
+
+Clearing Microsoft-Windows-WMPNSS-Service/Operational
+
+Clearing Microsoft-Windows-WMPNSSUI/Diagnostic
+
+Clearing Microsoft-Windows-WPD-API/Analytic
+
+Clearing Microsoft-Windows-WPD-ClassInstaller/Analytic
+
+Clearing Microsoft-Windows-WPD-ClassInstaller/Operational
+
+Clearing Microsoft-Windows-WPD-CompositeClassDriver/Analytic
+
+Clearing Microsoft-Windows-WPD-CompositeClassDriver/Operational
+
+Clearing Microsoft-Windows-WPD-MTPBT/Analytic
+
+Clearing Microsoft-Windows-WPD-MTPClassDriver/Analytic
+
+Clearing Microsoft-Windows-WPD-MTPClassDriver/Operational
+
+Clearing Microsoft-Windows-WPD-MTPIP/Analytic
+
+Clearing Microsoft-Windows-WPD-MTPUS/Analytic
+
+Clearing Microsoft-Windows-WSC-SRV/Diagnostic
+
+Clearing Microsoft-Windows-WUSA/Debug
+
+Clearing Microsoft-Windows-WWAN-CFE/Diagnostic
+
+Clearing Microsoft-Windows-WWAN-MM-Events/Diagnostic
+
+Clearing Microsoft-Windows-WWAN-MediaManager/Diagnostic
+
+Clearing Microsoft-Windows-WWAN-NDISUIO-EVENTS/Diagnostic
+
+Clearing Microsoft-Windows-WWAN-SVC-Events/Diagnostic
+
+Clearing Microsoft-Windows-WWAN-SVC-Events/Operational
+
+Clearing Microsoft-Windows-Wcmsvc/Diagnostic
+
+Clearing Microsoft-Windows-Wcmsvc/Operational
+
+Clearing Microsoft-Windows-WebAuth/Operational
+
+Clearing Microsoft-Windows-WebAuthN/Operational
+
+Clearing Microsoft-Windows-WebIO-NDF/Diagnostic
+
+Clearing Microsoft-Windows-WebIO/Diagnostic
+
+Clearing Microsoft-Windows-WebPlatStorage-Server
+
+Clearing Microsoft-Windows-WebServices/Tracing
+
+Clearing Microsoft-Windows-WebcamProvider/Analytic
+
+Clearing Microsoft-Windows-Websocket-Protocol-Component/Tracing
+
+Clearing Microsoft-Windows-WiFiDisplay/Analytic
+
+Clearing Microsoft-Windows-Win32k/Concurrency
+
+Clearing Microsoft-Windows-Win32k/Contention
+
+Clearing Microsoft-Windows-Win32k/Messages
+
+Clearing Microsoft-Windows-Win32k/Operational
+
+Clearing Microsoft-Windows-Win32k/Power
+
+Clearing Microsoft-Windows-Win32k/Render
+
+Clearing Microsoft-Windows-Win32k/Tracing
+
+Clearing Microsoft-Windows-Win32k/UIPI
+
+Clearing Microsoft-Windows-WinHTTP-NDF/Diagnostic
+
+Clearing Microsoft-Windows-WinHttp/Diagnostic
+
+Clearing Microsoft-Windows-WinINet-Capture/Analytic
+
+Clearing Microsoft-Windows-WinINet-Config/ProxyConfigChanged
+
+Clearing Microsoft-Windows-WinINet/Analytic
+
+Clearing Microsoft-Windows-WinINet/UsageLog
+
+Clearing Microsoft-Windows-WinINet/WebSocket
+
+Clearing Microsoft-Windows-WinMDE/MDE
+
+Clearing Microsoft-Windows-WinML/Analytic
+
+Clearing Microsoft-Windows-WinNat/Oper
+
+Clearing Microsoft-Windows-WinNat/Trace
+
+Clearing Microsoft-Windows-WinRM/Analytic
+
+Clearing Microsoft-Windows-WinRM/Debug
+
+Clearing Microsoft-Windows-WinRM/Operational
+
+Clearing Microsoft-Windows-WinURLMon/Analytic
+
+Clearing Microsoft-Windows-Windeploy/Analytic
+
+Clearing Microsoft-Windows-Windows Defender/Operational
+
+Clearing Microsoft-Windows-Windows Defender/WHC
+
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/ConnectionSecurity
+
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/ConnectionSecurityVerbose
+
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/FirewallDiagnostics
+
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/FirewallVerbose
+
+Clearing Microsoft-Windows-WindowsBackup/ActionCenter
+
+Clearing Microsoft-Windows-WindowsColorSystem/Debug
+
+Clearing Microsoft-Windows-WindowsColorSystem/Operational
+
+Clearing Microsoft-Windows-WindowsSystemAssessmentTool/Operational
+
+Clearing Microsoft-Windows-WindowsSystemAssessmentTool/Tracing
+
+Clearing Microsoft-Windows-WindowsUIImmersive/Diagnostic
+
+Clearing Microsoft-Windows-WindowsUIImmersive/Operational
+
+Clearing Microsoft-Windows-WindowsUpdateClient/Analytic
+
+Clearing Microsoft-Windows-WindowsUpdateClient/Operational
+
+Clearing Microsoft-Windows-Wininit/Diagnostic
+
+Clearing Microsoft-Windows-Winlogon/Diagnostic
+
+Clearing Microsoft-Windows-Winlogon/Operational
+
+Clearing Microsoft-Windows-Winsock-AFD/Operational
+
+Clearing Microsoft-Windows-Winsock-NameResolution/Operational
+
+Clearing Microsoft-Windows-Winsock-WS2HELP/Operational
+
+Clearing Microsoft-Windows-Winsrv/Analytic
+
+Clearing Microsoft-Windows-Wired-AutoConfig/Diagnostic
+
+Clearing Microsoft-Windows-Wired-AutoConfig/Operational
+
+Clearing Microsoft-Windows-WlanDlg/Analytic
+
+Clearing Microsoft-Windows-Wordpad/Admin
+
+Clearing Microsoft-Windows-Wordpad/Debug
+
+Clearing Microsoft-Windows-Wordpad/Diagnostic
+
+Clearing Microsoft-Windows-WorkFolders/Analytic
+
+Clearing Microsoft-Windows-WorkFolders/Debug
+
+Clearing Microsoft-Windows-WorkFolders/Operational
+
+Clearing Microsoft-Windows-WorkFolders/WHC
+
+Clearing Microsoft-Windows-Workplace Join/Admin
+
+Clearing Microsoft-Windows-XAML-Diagnostics/Default
+
+Clearing Microsoft-Windows-XAML/Default
+
+Clearing Microsoft-Windows-XAudio2/Debug
+
+Clearing Microsoft-Windows-XAudio2/Performance
+
+Clearing Microsoft-Windows-glcnd/Admin
+
+Clearing Microsoft-Windows-glcnd/Debug
+
+Clearing Microsoft-Windows-glcnd/Diagnostic
+
+Clearing Microsoft-Windows-mobsync/Diagnostic
+
+Clearing Microsoft-Windows-ntshrui
+
+Clearing Microsoft-Windows-ntshrui-perf
+
+Clearing Microsoft-Windows-osk/Diagnostic
+
+Clearing Microsoft-Windows-stobject/Diagnostic
+
+Clearing Microsoft-Windows-wmbclass/Analytic
+
+Clearing Microsoft-Windows-wmbclass/Trace
+
+Clearing Microsoft-WindowsAzure-Diagnostics/Bootstrapper
+
+Clearing Microsoft-WindowsAzure-Diagnostics/GuestAgent
+
+Clearing Microsoft-WindowsAzure-Diagnostics/Heartbeat
+
+Clearing Microsoft-WindowsAzure-Diagnostics/Runtime
+
+Clearing Microsoft-WindowsAzure-Status/GuestAgent
+
+Clearing Microsoft-WindowsAzure-Status/Plugins
+
+Clearing Microsoft-WindowsPhone-Connectivity-WiFiConnSvc-Channel
+
+Clearing Microsoft-WindowsPhone-LocationServiceProvider/Debug
+
+Clearing Microsoft-WindowsPhone-Net-Cellcore-CellManager/Debug
+
+Clearing Microsoft-WindowsPhone-Net-Cellcore-CellularAPI/Debug
+
+Clearing NIS-Driver-WFP/Diagnostic
+
+Clearing Navigator
+
+Clearing Network Isolation Operational
+
+Clearing OAlerts
+
+Clearing OSK_SoftKeyboard_Channel
+
+Clearing OfficeChannel
+
+Clearing OfficeDebugChannel
+
+Clearing OpenSSH/Admin
+
+Clearing OpenSSH/Debug
+
+Clearing OpenSSH/Operational
+
+Clearing Physical_Keyboard_Manager_Channel
+
+Clearing PlayReadyPerformanceChannel
+
+Clearing RTWorkQueueExtended
+
+Clearing RTWorkQueueTheading
+
+Clearing SMSApi
+
+Clearing Security
+
+Clearing Setup
+
+Clearing SmbWmiAnalytic
+
+Clearing System
+
+Clearing SystemEventsBroker
+
+Clearing TabletPC_InputPanel_Channel
+
+Clearing TabletPC_InputPanel_Channel/IHM
+
+Clearing TimeBroker
+
+Clearing UIManager_Channel
+
+Clearing Uac/Debug
+
+Clearing WINDOWS_KS_CHANNEL
+
+Clearing WINDOWS_MFH264Enc_CHANNEL
+
+Clearing WINDOWS_MP4SDECD_CHANNEL
+
+Clearing WINDOWS_MSMPEG2ADEC_CHANNEL
+
+Clearing WINDOWS_MSMPEG2VDEC_CHANNEL
+
+Clearing WINDOWS_VC1ENC_CHANNEL
+
+Clearing WINDOWS_WMPHOTO_CHANNEL
+
+Clearing WINDOWS_wmvdecod_CHANNEL
+
+Clearing WMPSetup
+
+Clearing WMPSyncEngine
+
+Clearing Windows Azure
+
+Clearing Windows Networking Vpn Plugin Platform/Operational
+
+Clearing Windows Networking Vpn Plugin Platform/OperationalVerbose
+
+Clearing Windows PowerShell
+
+Clearing WordChannel
+
+Clearing muxencode
+
+
+Successfully cleaned the event logs
+            Native Image Generation 32bit (NGEN) -
+
+.NET assemblies optimized
+            Native Image Generation 64bit (NGEN) -
+
+.NET assemblies optimized
+
+        Group: Optional Components
+        Group ID: OptionalComponents
+            Disable Windows Customer Experience Improvement program -
+ Entry is not marked for execution, skipping
+            Microsoft.ScreenSketch -
+ Entry is not marked for execution, skipping
+            Microsoft.StorePurchaseApp -
+ Entry is not marked for execution, skipping
+            Microsoft.VP9VideoExtensions -
+ Entry is not marked for execution, skipping
+            Microsoft.WindowsCalculator -
+ Entry is not marked for execution, skipping
+            Microsoft.WindowsStore -
+ Entry is not marked for execution, skipping
+            Superfetch -
+ Entry is not marked for execution, skipping
+            Windows Error Reporting Service -
+ Entry is not marked for execution, skipping
+            Windows Search -
+ Entry is not marked for execution, skipping
+
+        Group: Rollback
+        Group ID: Rollback
+            Connected User Experiences and Telemetry -
+Startup type is Automatic
+            Optimize drives -
+Startup type is Manual
+            Shell Hardware Detection -
+Startup type is Automatic
+**********************
+Windows PowerShell transcript end
+End time: 20220816231840
+**********************
