@@ -66,6 +66,9 @@ if (Test-Path $WinstationsKey) {
 Set-Content $updatePath $file
 
 # run script
+#Write-Host 'Install and Update Application List"
+.\ApplicationUpdate.ps1 
+
 #Write-Host 'Running new AIB Customization script'
 .\Windows_VDOT.ps1 -Verbose -AcceptEULA
 Write-Host 'AVD Customization: Finished OS Optimizations script Windows_VDOT.ps1'
